@@ -4,6 +4,7 @@ import FeaturesSection from '../components/sections/FeaturesSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
 import CtaSection from '../components/sections/CtaSection';
 import ROICalculator from '../components/sections/ROICalculator';
+import Banner from '../components/sections/Banner';
 
 const Home: React.FC = () => {
   // Update the document title
@@ -38,6 +39,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <IndustriesSection />
+      <Banner />
       <CtaSection />
     </div>
   );
