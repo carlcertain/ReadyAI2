@@ -8,7 +8,29 @@ const Banner: React.FC = () => {
                 <div className="lg:text-center mb-12">
                     <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">
                         <img
-                            src="/src/images/Screenshot 2025-06-18 130257.png"
+                            src="/src/images/banner1.png"
+                        /><img
+                            src="/src/images/banner4.png"
+                        /><img
+                            src="/src/images/banner5.png"
+                        /><img
+                            src="/src/images/banner7.png"
+                        /><img
+                            src="/src/images/banner8.png"
+                        /><img
+                            src="/src/images/banner9.png"
+                        /><img
+                            src="/src/images/banner10.png"
+                        /><img
+                            src="/src/images/banner12.png"
+                        /><img
+                            src="/src/images/banner13.png"
+                        /><img
+                            src="/src/images/banner14.png"
+                        /><img
+                            src="/src/images/banner15.png"
+                        /><img
+                            src="/src/images/banner18.png"
                         />
                     </h2>
                 </div>
