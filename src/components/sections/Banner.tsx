@@ -11,29 +11,29 @@ const Banner: React.FC = () => {
                 <div className="lg:text-center mb-12">
                     <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">
                         <img
-                            src={homeUrl + "/src/images/banner1.png"}
+                            src={homeUrl + "/assets/images/banner1.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner4.png"}
+                            src={homeUrl + "/assets/images/banner4.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner5.png"}
+                            src={homeUrl + "/assets/images/banner5.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner7.png"}
+                            src={homeUrl + "/assets/images/banner7.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner8.png"}
+                            src={homeUrl + "/assets/images/banner8.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner9.png"}
+                            src={homeUrl + "/assets/images/banner9.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner10.png"}
+                            src={homeUrl + "/assets/images/banner10.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner12.png"}
+                            src={homeUrl + "/assets/images/banner12.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner13.png"}
+                            src={homeUrl + "/assets/images/banner13.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner14.png"}
+                            src={homeUrl + "/assets/images/banner14.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner15.png"}
+                            src={homeUrl + "/assets/images/banner15.png"}
                         /><img
-                            src={homeUrl + "/src/images/banner18.png"}
+                            src={homeUrl + "/assets/images/banner18.png"}
                         />
                     </h2>
                 </div>
