@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import ContactForm from '../components/layout/ContactForm';
+import CalendlySection from '../components/sections/CalendlySection';
 
 const ContactPage: React.FC = () => {
   React.useEffect(() => {
@@ -56,10 +57,17 @@ const ContactPage: React.FC = () => {
                     href="tel:888-778-6864" 
                     className="mt-1 text-gray-500 hover:text-accent"
                   >
-                    949 402 7053
+                    949 444 5881
                   </a>
                 </div>
               </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0">                  
+                  <CalendlySection />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
