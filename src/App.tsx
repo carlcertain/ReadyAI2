@@ -10,6 +10,10 @@ import SearchResults from './pages/SearchResults';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import GdprPolicy from './pages/GdprPolicy';
+import PricingPage from './pages/PricingPage';
+import ResourcesPage from './pages/ResourcesPage';
+import BlogPage from './pages/BlogPage';
+import FAQPage from './pages/FaqPage';
 import CookieConsent from './components/ui/CookieConsent';
 import { usePerformance } from './hooks/usePerformance';
 
@@ -36,13 +40,17 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/solutions/:solutionId" element={<SolutionsPage />} />
-            <Route path="/industry" element={<IndustryPage />} />
-            <Route path="/industry/:industryId" element={<IndustryPage />} />
+            {/* <Route path="/industry" element={<IndustryPage />} />
+            <Route path="/industry/:industryId" element={<IndustryPage />} /> */}
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/search" element={<SearchResults />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/gdpr" element={<GdprPolicy />} />
+            <Route path="/gdpr" element={<GdprPolicy />} />            
+            <Route path="/pricing" element={<PricingPage />} />     
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/faq" element={<FAQPage />} />
           </Routes>
         </main>
         <Footer />

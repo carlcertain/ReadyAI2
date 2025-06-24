@@ -24,7 +24,7 @@ const IndustriesSection: React.FC = () => {
             Tailored AI solutions for every sector
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Discover how Devs.ai can transform operations and drive innovation in your industry.
+            Discover how we can transform operations and drive innovation in your industry.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import CalendlySection from './CalendlySection';
+import CalendlySectionPopUp from './CalendlySectionPopUp';
 
 const CtaSection: React.FC = () => {
   return (
@@ -27,7 +28,7 @@ const CtaSection: React.FC = () => {
           </div>
           </div>
 
-            
+          <CalendlySectionPopUp />
 
             {/* <Link to="/contact">
               <Button 

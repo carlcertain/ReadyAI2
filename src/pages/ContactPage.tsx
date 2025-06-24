@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import ContactForm from '../components/layout/ContactForm';
-import CalendlySection from '../components/sections/CalendlySection';
+import CalendlySectionPopUp from '../components/sections/CalendlySectionPopUp';
 
 const ContactPage: React.FC = () => {
   React.useEffect(() => {
@@ -10,6 +10,9 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="pt-20">
+    
+      <CalendlySectionPopUp />
+
       <div className="bg-primary py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -64,7 +67,7 @@ const ContactPage: React.FC = () => {
 
               <div className="flex items-start">
                 <div className="flex-shrink-0">                  
-                  <CalendlySection />
+                  
                 </div>
               </div>
 
