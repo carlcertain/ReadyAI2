@@ -44,6 +44,6 @@
   to = "/.netlify/functions/health"
   status = 200
 
-[context.production]
-  [context.production.environment]
+[context.development]
+  [context.development.environment]
     NODE_ENV = "development"
