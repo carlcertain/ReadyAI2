@@ -10,14 +10,24 @@
   to = "/index.html"
   status = 200
 
-[[headers]]
+[headers]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.readyai.com https://*.netlify.com https://*.supabase.co; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.calendly.com;
+      style-src 'self' 'unsafe-inline' https://assets.calendly.com;
+      img-src 'self' data: https:;
+      font-src 'self' data: https://assets.calendly.com;
+      connect-src 'self' https://*.readyai.com https://*.netlify.com https://*.supabase.co;
+      frame-src https://calendly.com;
+      frame-ancestors 'none';
+      form-action 'self';
+      upgrade-insecure-requests;
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(), usb=(), screen-wake-lock=(), ambient-light-sensor=(), accelerometer=(), gyroscope=(), magnetometer=(), midi=(), sync-xhr=(), autoplay=(), encrypted-media=(), picture-in-picture=(), fullscreen=(self)"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Cross-Origin-Embedder-Policy = "require-corp"
