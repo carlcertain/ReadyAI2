@@ -12,7 +12,11 @@ export default {
         accent: {
           DEFAULT: '#D4B36A',
           light: '#E2C788',
-          dark: '#C6A04C'
+          dark: '#a6863f'
+        },
+        accent2: {
+          DEFAULT: '#594d35',
+          light: '#f7e8c8'
         }
       }
     },
