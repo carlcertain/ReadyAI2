@@ -16,7 +16,9 @@ export default {
         },
         accent2: {
           DEFAULT: '#594d35',
-          light: '#f7e8c8'
+          light: '#f7e8c8',
+          lighter: '#fcf6e8',
+          lightest: '#faf7f0'
         }
       }
     },
