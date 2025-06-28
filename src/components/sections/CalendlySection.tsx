@@ -12,7 +12,7 @@ const CalendlySection: React.FC = () => {
   return (
     <div
       className="calendly-inline-widget"
-      data-url="https://calendly.com/certaincarl/30min?hide_gdpr_banner=1"
+      data-url="https://calendly.com/readyai-sales/30min?hide_gdpr_banner=1"
       style={{ minWidth: "320px", height: "700px" }}
     ></div>     
   );

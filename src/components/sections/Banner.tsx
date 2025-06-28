@@ -7,6 +7,9 @@ import Banner4Section from './Banner4Section';
 import Banner5Section from './Banner5Section';
 import Banner6Section from './Banner6Section';
 import Banner7Section from './Banner7Section';
+import Banner8Section from './Banner8Section';
+import Banner9Section from './Banner9Section';
+import Banner10Section from './Banner10Section';
 
 const Banner: React.FC = () => {
 
@@ -22,9 +25,9 @@ const Banner: React.FC = () => {
                         <Banner5Section />
                         <Banner6Section />
                         <Banner7Section />
-                        <img src="/assets/images/banner13.png"/>
-                        <img src="/assets/images/banner14.png"/>
-                        <img src="/assets/images/banner15.png"/>
+                        <Banner8Section />
+                        <Banner9Section />
+                        <Banner10Section />
                     </h2>
                 </div>
             </div>

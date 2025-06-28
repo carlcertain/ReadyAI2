@@ -5,7 +5,7 @@ function CalendlySectionPopUp() {
   return (
     <div>
       <PopupWidget
-          url="https://calendly.com/certaincarl" 
+          url="https://calendly.com/readyai-sales" 
           rootElement={document.getElementById('root')} 
           text="Schedule a Call" 
           textColor="#ffffff" 

@@ -1,8 +1,10 @@
 // components/Banner7Section.jsx
 import React from 'react';
+import SlideAnimator from '../../utils/SlideAnimator';
 
 export default function Banner7Section() {
   return (
+    <SlideAnimator direction="right">
     <section className="relative text-white py-20 overflow-hidden">
       {/* Background translucent angles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -26,5 +28,6 @@ export default function Banner7Section() {
         </div>
       </div>
     </section>
+    </SlideAnimator>
   );
 }

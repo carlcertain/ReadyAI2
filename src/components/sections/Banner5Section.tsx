@@ -1,6 +1,7 @@
 // components/Banner5Section.jsx
 import React from 'react';
 import { ShieldCheck, RefreshCw, Cpu } from 'lucide-react';
+import SlideAnimator from '../../utils/SlideAnimator';
 
 const features = [
   {
@@ -22,6 +23,7 @@ const features = [
 
 export default function Banner5Section() {
   return (
+    <SlideAnimator direction="up">
     <div>
       {/* Top title row with different background */}
       <div className="bg-accent2-lightest text-accent2 text-center py-12">
@@ -47,5 +49,6 @@ export default function Banner5Section() {
         </div>
       </section>
     </div>
+    </SlideAnimator>
   );
 }
