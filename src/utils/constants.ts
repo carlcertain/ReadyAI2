@@ -73,14 +73,14 @@ export const NAVIGATION: NavItem[] = [
       path: `/solutions/${solution.id}`,
     })),
   },
-  // {
-  //   name: 'Industry',
-  //   path: '/industry',
-  //   submenu: INDUSTRIES.map(industry => ({
-  //     name: industry.name,
-  //     path: `/industry/${industry.id}`,
-  //   })),
-  // },
+  {
+    name: 'Industry',
+    path: '/industry',
+    submenu: INDUSTRIES.map(industry => ({
+      name: industry.name,
+      path: `/industry/${industry.id}`,
+    })),
+  },
   {
     name: 'Pricing',
     path: '/pricing'
@@ -89,10 +89,10 @@ export const NAVIGATION: NavItem[] = [
     name: 'Resources',
     path: '/resources'
   },
-  {
-    name: 'Blog',
-    path: '/blog'
-  },
+  // {
+  //   name: 'Blog',
+  //   path: '/blog'
+  // },
   {
     name: 'FAQ',
     path: '/faq'

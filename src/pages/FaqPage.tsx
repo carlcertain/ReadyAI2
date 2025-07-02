@@ -1,4 +1,57 @@
 import React from 'react';
+import { ChevronDown } from 'lucide-react';
+
+const faqs = [
+  {
+    question: '1. How can the Platform benefit my organization?',
+    answer:
+      'Our Platform is an advanced design to streamline and optimize your IT operations, procurement processes, and technology management, enabling your team to increase efficiency, reduce costs, and improve decision-making.',
+  },
+  {
+    question: '2. How do you help with procurement and vendor management?',
+    answer:
+      'Our platform provides centralized procurement workflows, vendor comparison, and real-time analytics, empowering Procurement and IT leaders to make informed vendor choices and automate purchasing processes.',
+  },
+  {
+    question: '3. Is your platform customizable to meet specific enterprise requirements?',
+    answer:
+      'Yes. It is highly customizable to align with your organization\'s workflows, security policies, and compliance needs, ensuring it fits seamlessly with your existing IT infrastructure.',
+  },
+  {
+    question: '4. How secure is the platform?',
+    answer:
+      'Security is our top priority. The Platform employs industry-leading encryption, role-based access controls, and regular security audits to protect your sensitive data and ensure compliance with relevant regulations. Our experienced Security Team is available to meet with you to share the best practices and integration security processes.',
+  },
+  {
+    question: '5. What kind of support and training do you offer?',
+    answer:
+      'We provide comprehensive onboarding, ongoing training, dedicated customer support, and tailored consultancy to ensure your team gets the most value from the platform. If your team is comfortable starting without our help, we can be a backup to your strategy development or engaged later.',
+  },
+  {
+    question: '6. How can your Platform help IT Directors improve operational efficiency?',
+    answer:
+      'By automating routine tasks, providing dashboards with key performance metrics, and enabling proactive issue resolution, we help IT Directors reduce downtime and optimize resource allocation, while managing the multi-department launch of different AI LLMs, agents, and integrations.',
+  },
+  {
+    question: '7. Can the platform scale as our business grows?',
+    answer:
+      'Absolutely. It was built to scale with your organization’s evolving needs, from small teams to large enterprise deployments, without compromising performance. Start with a pilot, develop a rollout plan with our expansive team\'s assistance, and enjoy a successful AI strategy for your entire organization.',
+  },
+  {
+    question: '8. What is the pricing model?',
+    answer: '$30/seat/month – that simple!',
+  },
+  {
+    question: '9. How can I get a demo or trial?',
+    answer:
+      'You can request a personalized demo with our team of AI experts or start a free trial by contacting our sales team at sales@readyai.dev. We’ll guide you through how the platform can meet your specific challenges.',
+  },
+  {
+    question: '10. Can I look at the Platform without contacting your sales team?',
+    answer:
+      'Absolutely yes! Click here to check out the enterprise-grade secure AI platform:\nhttps://devs.ai/signup?ref=sales%40readyai.dev',
+  },
+];
 
 const FaqPage: React.FC = () => {
   // Update the document title
@@ -19,7 +72,19 @@ const FaqPage: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Placeholder text as specified in requirements */}
         <p className="text-center text-gray-500 italic">
-          FAQ content coming soon.
+          <div className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border-l-4 border-accent-dark pl-6 pr-4 py-4 bg-accent-light/10 rounded-md shadow-sm"
+              >
+                <h3 className="text-xl text-accent-dark font-semibold mb-2">
+                  {faq.question}
+                </h3>
+                <p className="text-accent-dark whitespace-pre-line">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </p>
       </div>
     </div>
