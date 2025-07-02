@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import CalendlySection from './CalendlySection';
 import CalendlySectionPopUp from './CalendlySectionPopUp';
+import FloatingButton from '../../utils/FloatingButton';
 
 const CtaSection: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const CtaSection: React.FC = () => {
           </div>
           </div>
 
-          <CalendlySectionPopUp />
+          <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
 
             {/* <Link to="/contact">
               <Button 

@@ -12,6 +12,7 @@ import {
   Building,
   ArrowRight
 } from 'lucide-react';
+import CalendlySectionPopUp from '../components/sections/CalendlySectionPopUp';
 
 const iconMap = {
   'landmark': Landmark,
@@ -547,6 +548,9 @@ const IndustryPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      <CalendlySectionPopUp />
+      
     </div>
   );
 };

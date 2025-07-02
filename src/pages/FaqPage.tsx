@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import FloatingButton from '../utils/FloatingButton';
 
 const faqs = [
   {
@@ -49,7 +50,7 @@ const faqs = [
   {
     question: '10. Can I look at the Platform without contacting your sales team?',
     answer:
-      'Absolutely yes! Click here to check out the enterprise-grade secure AI platform:\nhttps://devs.ai/signup?ref=sales%40readyai.dev',
+      'Absolutely yes!',
   },
 ];
 
@@ -60,33 +61,46 @@ const FaqPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="pt-20">
-      <div className="bg-primary py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
-            Frequently Asked Questions
-          </h1>
-        </div>
+
+    <div>
+      <div className="relative bg-gradient-to-br from-primary via-primary-light to-primary-dark overflow-hidden">
+      {/* Abstract background patterns */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"></div>
       </div>
       
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="pt-20 pb-10 md:pt-24 md:pb-14">
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+              <span className="block">Frequently Asked Questions</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <div className="pt-20">   
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Placeholder text as specified in requirements */}
-        <p className="text-center text-gray-500 italic">
-          <div className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-l-4 border-accent-dark pl-6 pr-4 py-4 bg-accent-light/10 rounded-md shadow-sm"
-              >
-                <h3 className="text-xl text-accent-dark font-semibold mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-accent-dark whitespace-pre-line">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </p>
+        <div className="space-y-8">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border-l-4 border-accent-dark pl-6 pr-4 py-4 bg-accent-light/10 rounded-md shadow-sm transition-transform duration-300 ease-out transform hover:scale-105 hover:shadow-md"
+            >
+              <h3 className="text-xl text-gray-700 font-semibold mb-2">
+                {faq.question}
+              </h3>
+              <p className="text-accent-dark whitespace-pre-line">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
+    </div>
+    
+    <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
+
     </div>
   );
 };

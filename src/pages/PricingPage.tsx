@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PricingSection1 from '../components/sections/PricingSection1';
+import FloatingButton from '../utils/FloatingButton';
 
 
 const PricingPage: React.FC = () => {
@@ -27,6 +28,9 @@ const PricingPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">                
         <PricingSection1 />               
     </div>
+    
+  <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
+
   </div>
     
   );

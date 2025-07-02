@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { SOLUTIONS } from '../utils/constants';
 import { ArrowRight, Brain, Cpu, LayoutDashboard, Shield, TrendingDown } from 'lucide-react';
 import Button from '../components/ui/Button';
+import FloatingButton from '../utils/FloatingButton';
 
 const iconMap = {
   'brain': Brain,
@@ -436,6 +437,8 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       )}
+      
+    <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
     </div>
   );
 };
