@@ -26,7 +26,7 @@ const features = [
 export default function Banner9Section() {
   return (
     <SlideAnimator direction="down">
-    <section className="relative bg-white py-20 px-6 md:px-20">
+    <section className="relative bg-white py-20 px-6 md:px-20 overflow-hidden">
       {/* Background translucent angles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-100/50 transform skew-x-[-20deg]"></div>
