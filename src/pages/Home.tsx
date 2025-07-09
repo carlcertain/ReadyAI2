@@ -5,6 +5,12 @@ import IndustriesSection from '../components/sections/IndustriesSection';
 import CtaSection from '../components/sections/CtaSection';
 import ROICalculator from '../components/sections/ROICalculator';
 import Banner from '../components/sections/Banner';
+import Banner3Section from '../components/sections/Banner3Section';
+import Banner2Section from '../components/sections/Banner2Section';
+import Banner1Section from '../components/sections/Banner1Section';
+import Banner4Section from '../components/sections/Banner4Section';
+import Banner5Section from '../components/sections/Banner5Section';
+import Banner6Section from '../components/sections/Banner6Section';
 
 const Home: React.FC = () => {
   // Update the document title
@@ -15,6 +21,12 @@ const Home: React.FC = () => {
   return (
     <div>
       <HeroSection />
+      <Banner3Section />
+      <Banner2Section />
+      <Banner4Section />
+      <Banner1Section />
+      <Banner5Section />
+      <Banner6Section />
       <FeaturesSection />
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
