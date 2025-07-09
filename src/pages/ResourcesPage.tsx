@@ -11,7 +11,7 @@ const resources = [
   },
   {
     title: "AI Stack Explained",
-    description: "Explore Ready.ai’s full AI stack from secure infra to LLMs and tools.",
+    description: "Explore ReadyAI’s full AI stack from secure infra to LLMs and tools.",
     icon: FileDown,
     link: "/resources/ai-stack",
   },

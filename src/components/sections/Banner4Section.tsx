@@ -44,7 +44,7 @@ export default function Banner4Section() {
             {"</>"}
           </div>
           <h2 className="text-3xl font-semibold leading-tight">
-            Ready.ai offers <br />
+            ReadyAI offers <br />
             the full AI stack
           </h2>
         </div>

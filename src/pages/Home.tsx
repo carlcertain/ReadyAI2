@@ -11,6 +11,10 @@ import Banner1Section from '../components/sections/Banner1Section';
 import Banner4Section from '../components/sections/Banner4Section';
 import Banner5Section from '../components/sections/Banner5Section';
 import Banner6Section from '../components/sections/Banner6Section';
+import Banner7Section from '../components/sections/Banner7Section';
+import Banner8Section from '../components/sections/Banner8Section';
+import Banner9Section from '../components/sections/Banner9Section';
+import Banner10Section from '../components/sections/Banner10Section';
 
 const Home: React.FC = () => {
   // Update the document title
@@ -23,10 +27,14 @@ const Home: React.FC = () => {
       <HeroSection />
       <Banner3Section />
       <Banner2Section />
+      <Banner8Section />
       <Banner4Section />
       <Banner1Section />
       <Banner5Section />
       <Banner6Section />
+      <Banner7Section />
+      <Banner9Section />
+      <Banner10Section />
       <FeaturesSection />
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

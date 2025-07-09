@@ -74,7 +74,7 @@ const Banner2Section = () => {
 
         {/* Background Shield Icon */}
         <Shield
-          className="absolute left-10 top-1/2 -translate-y-1/2 w-[400px] h-[400px] text-white/5 z-0 pointer-events-none"
+          className="absolute left-10 top-1/2 -translate-y-1/2 w-[400px] h-[400px] text-accent2/5 z-0 pointer-events-none"
         />
       </section>
     </SlideAnimator>

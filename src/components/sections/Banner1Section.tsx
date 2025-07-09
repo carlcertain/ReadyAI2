@@ -35,7 +35,7 @@ const Banner1Section = () => {
       >
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-accent2-light text-2xl font-light mb-4 tracking-wide">Ready.ai</h2>
+          <h2 className="text-accent2-light text-2xl font-light mb-4 tracking-wide">ReadyAI</h2>
           <h1 className="text-white text-6xl font-bold">Solution</h1>
         </div>
 

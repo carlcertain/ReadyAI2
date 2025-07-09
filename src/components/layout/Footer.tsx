@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-center">
               <img 
-                src="/readyai-logo.png" 
+                src="/readyai-logo.jpg" 
                 alt="ReadyAI" 
                 className="h-8 w-auto"
               />

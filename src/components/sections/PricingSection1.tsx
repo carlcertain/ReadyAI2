@@ -107,7 +107,7 @@ const PricingSection1: React.FC = () => {
         <div className="w-1/2 bg-accent2 text-white p-16 flex flex-col rounded-3xl">
           <div className="max-w-md">
             <h1 className="text-4xl font-bold mb-12 leading-tight">
-              Ready.ai value
+              ReadyAI value
             </h1>
             
             <div className="space-y-8">
@@ -167,7 +167,7 @@ const PricingSection1: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Direct sub</h2>
               </div>
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Ready.ai</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">ReadyAI</h2>
               </div>
             </div>
 
@@ -219,7 +219,7 @@ const PricingSection1: React.FC = () => {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <button className="bg-accent hover:bg-accent-dark text-white font-bold py-4 px-12 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-                Get Started with Ready.ai
+                Get Started with ReadyAI
               </button>
             </div>
           </div>
