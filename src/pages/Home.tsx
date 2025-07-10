@@ -25,11 +25,11 @@ const Home: React.FC = () => {
   return (
     <div>
       <HeroSection />
+      <Banner1Section />
       <Banner3Section />
       <Banner2Section />
       <Banner8Section />
       <Banner4Section />
-      <Banner1Section />
       <Banner5Section />
       <Banner6Section />
       <Banner7Section />

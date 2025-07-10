@@ -7,18 +7,17 @@ const Footer: React.FC = () => {
     <footer className="bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-6">
-            <div className="flex items-center">
-              <img 
-                src="/readyai-logo.jpg" 
+          <ul className="space-y-6">            
+              <li><img 
+                src="/readyai-logo.jpg"
                 alt="ReadyAI" 
                 className="h-8 w-auto"
-              />
-            </div>
-            <p className="text-gray-500 text-sm">
+              /></li>     
+            <li><Link to="/contact" className="text-gray-500 hover:text-gray-900">Contact</Link></li>
+            <li><p className="text-gray-500 text-sm">
               Simplify AI adoption with a secure, flexible platform that meets your specific business needs.
-            </p>
-          </div>
+            </p></li>
+          </ul>
           
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Solutions</h3>
@@ -54,7 +53,6 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy-policy" className="text-gray-500 hover:text-gray-900">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="text-gray-500 hover:text-gray-900">Terms of Service</Link></li>
               <li><Link to="/gdpr" className="text-gray-500 hover:text-gray-900">GDPR</Link></li>
-              <li><Link to="/contact" className="text-gray-500 hover:text-gray-900">Contact</Link></li>
             </ul>
           </div>
         </div>

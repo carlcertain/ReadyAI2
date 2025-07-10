@@ -6,12 +6,12 @@ const faqs = [
   {
     question: '1. How can the Platform benefit my organization?',
     answer:
-      'Our Platform is an advanced design to streamline and optimize your IT operations, procurement processes, and technology management, enabling your team to increase efficiency, reduce costs, and improve decision-making.',
+      'The Platform is an advanced design to streamline and optimize your IT operations, procurement processes, and technology management, enabling your team to increase efficiency, reduce costs, and improve decision-making.',
   },
   {
     question: '2. How do you help with procurement and vendor management?',
     answer:
-      'Our platform provides centralized procurement workflows, vendor comparison, and real-time analytics, empowering Procurement and IT leaders to make informed vendor choices and automate purchasing processes.',
+      'The platform provides centralized procurement workflows, vendor comparison, and real-time analytics, empowering Procurement and IT leaders to make informed vendor choices and automate purchasing processes.',
   },
   {
     question: '3. Is your platform customizable to meet specific enterprise requirements?',
@@ -45,10 +45,10 @@ const faqs = [
   {
     question: '9. How can I get a demo or trial?',
     answer:
-      'You can request a personalized demo with our team of AI experts or start a free trial by contacting our sales team at sales@readyai.dev. We’ll guide you through how the platform can meet your specific challenges.',
+      'You can request a personalized demo with the team of AI experts or start a free trial by contacting the sales team at sales@readyai.dev. We’ll guide you through how the platform can meet your specific challenges.',
   },
   {
-    question: '10. Can I look at the Platform without contacting your sales team?',
+    question: '10. Can I look at the Platform without contacting the sales team?',
     answer:
       'Absolutely yes!',
   },
@@ -63,6 +63,9 @@ const FaqPage: React.FC = () => {
   return (
 
     <div>
+      
+      <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
+
       <div className="relative bg-gradient-to-br from-primary via-primary-light to-primary-dark overflow-hidden">
       {/* Abstract background patterns */}
       <div className="absolute inset-0 opacity-10">

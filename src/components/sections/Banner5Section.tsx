@@ -28,7 +28,7 @@ export default function Banner5Section() {
       {/* Top title row with different background */}
       <div className="bg-accent2-lightest text-accent2 text-center py-12">
         <h2 className="text-lg md:text-xl font-light">AI users face</h2>
-        <h1 className="text-3xl md:text-4xl font-bold">major problems</h1>
+        <h1 className="text-3xl md:text-4xl font-bold">Major Problems</h1>
       </div>
 
       {/* Feature cards section */}

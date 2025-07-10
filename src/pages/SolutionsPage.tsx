@@ -56,7 +56,7 @@ const SolutionsPage: React.FC = () => {
                 Complete AI Solution Suite
               </h1>
               <p className="mt-4 text-lg text-gray-100 max-w-3xl">
-                ReadyAI's is a leading agentic AI creation and management platform—designed to bring artificial intelligence 
+                This is a enterprise-grade leading agentic AI creation and management platform—designed to bring artificial intelligence 
                 to every corner of the business. Discover our comprehensive suite of AI solutions.
               </p>
             </div>

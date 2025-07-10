@@ -38,7 +38,7 @@ const ROICalculator: React.FC = () => {
         </div>
 
         <p className="text-gray-600 mb-6">
-          Calculate your potential savings by switching to our platform.
+          Calculate your potential savings by switching to the platform.
         </p>
 
         <div className="space-y-4">
@@ -96,7 +96,7 @@ const ROICalculator: React.FC = () => {
             </div>
 
             <p className="mt-4 text-sm text-blue-700">
-              By switching to our platform, you could save ${annualSavings.toLocaleString()} annually,
+              By switching to the platform, you could save ${annualSavings.toLocaleString()} annually,
               which is {percentageSavings.toFixed(1)}% of your current AI spending.
             </p>
           </div>

@@ -44,6 +44,12 @@ const PricingSection1: React.FC = () => {
       price: 'Open source',
       icon: '/assets/images/deepseek.png',
       color: 'bg-purple-600'
+    },
+    {
+      name: '',
+      price: 'Plus more!',
+      icon: '',
+      color: ''
     }
   ];
 
@@ -116,7 +122,7 @@ const PricingSection1: React.FC = () => {
                   <Brain className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-5xl font-bold text-accent-light">7</div>
+                  <div className="text-5xl font-bold text-accent-light">7+</div>
                   <div className="text-xl text-accent">AI subscriptions</div>
                 </div>
               </div>
@@ -188,7 +194,9 @@ const PricingSection1: React.FC = () => {
                     <span className="text-lg font-medium text-gray-700">{service.price}</span>
                   </div>
                   <div className="text-center">
-                    <span className="text-lg font-medium text-accent-dark">All Models Included</span>
+                    {service.name && (
+                      <span className="text-lg font-medium text-accent-dark">All Models Included</span>
+                    )}
                   </div>
                 </div>
               ))}
@@ -218,9 +226,11 @@ const PricingSection1: React.FC = () => {
 
             {/* CTA Button */}
             <div className="mt-12 text-center">
-              <button className="bg-accent hover:bg-accent-dark text-white font-bold py-4 px-12 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-                Get Started with ReadyAI
-              </button>
+              <a href="https://devs.ai/signup?ref=sales%40readyai.dev">
+                <button className="bg-accent hover:bg-accent-dark text-white font-bold py-4 px-12 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                  Get Started with ReadyAI
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -298,22 +308,24 @@ const PricingSection1: React.FC = () => {
                   </ul>
                 </div>
 
-                <button 
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    tier.popular
-                      ? 'text-white shadow-lg hover:shadow-xl'
-                      : 'border-2 hover:opacity-80'
-                  }`}
-                  style={tier.popular ? { 
-                    backgroundColor: '#D4B36A',
-                  } : { 
-                    borderColor: '#D4B36A', 
-                    color: '#a6863f',
-                    backgroundColor: 'transparent'
-                  }}
-                >
-                  Get Started
-                </button>
+                <a href="https://devs.ai/signup?ref=sales%40readyai.dev">
+                  <button 
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                      tier.popular
+                        ? 'text-white shadow-lg hover:shadow-xl'
+                        : 'border-2 hover:opacity-80'
+                    }`}
+                    style={tier.popular ? { 
+                      backgroundColor: '#D4B36A',
+                    } : { 
+                      borderColor: '#D4B36A', 
+                      color: '#a6863f',
+                      backgroundColor: 'transparent'
+                    }}
+                  >
+                    Get Started
+                  </button>
+                </a>
               </div>
             ))}
           </div>          

@@ -17,7 +17,7 @@ const PricingPage: React.FC = () => {
         <div className="pt-20 pb-10 md:pt-24 md:pb-14"> {/* Reduced padding to make background shorter */}
           <div className="text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">Our pricing</span>
+              <span className="block">Pricing</span>
               <span className="block text-2xl mt-4 text-accent">Enterprise grade platform for one monthly fee</span>
             </h1>
           </div>
