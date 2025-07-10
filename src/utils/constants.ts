@@ -85,10 +85,10 @@ export const NAVIGATION: NavItem[] = [
     name: 'Pricing',
     path: '/pricing'
   },
-  {
-    name: 'Resources',
-    path: '/resources'
-  },
+  // {
+  //   name: 'Resources',
+  //   path: '/resources'
+  // },
   // {
   //   name: 'Blog',
   //   path: '/blog'

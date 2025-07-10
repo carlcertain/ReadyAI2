@@ -253,15 +253,7 @@ const PricingSection1: React.FC = () => {
                     : 'bg-white shadow-xl'
                 }`}
                 style={tier.popular ? { borderColor: '#D4B36A' } : {}}
-              >
-                {tier.popular && (
-                  <div 
-                    className="text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4"
-                    style={{ backgroundColor: '#D4B36A' }}
-                  >
-                    Most Popular
-                  </div>
-                )}
+              >              
                 
                 <div className="mb-6">
                   <h3 style={{ color: '#a6863f' }} className="text-2xl font-bold mb-2">
