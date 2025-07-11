@@ -37,7 +37,7 @@ export default function Banner4Section() {
   return (
     <SlideAnimator direction="left">
     <div className="text-accent2 min-h-[500px] px-8 py-12">
-      <div className="grid grid-cols-3 gap-12 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-12 w-full max-w-7xl mx-auto">
         {/* Column 1: Left Text */}
         <div className="flex flex-col items-center justify-center text-left space-y-4">
           <div className="bg-black text-white p-4 rounded-xl text-2xl font-bold">
@@ -68,10 +68,10 @@ export default function Banner4Section() {
         </div>
 
         {/* Column 3: Layer Titles + Descriptions */}
-        <div className="flex flex-col justify-start space-y-8 pt-[20px]">
+        <div className="col-span-2 md:col-span-1 flex flex-col items-center md:items-start text-center font-size- md:text-left space-y-8 pt-[20px] mx-auto md:mx-0">
           {layers.map((layer) => (
-            <div key={layer.title} className="text-sm text-left">
-              <p className="font-semibold text-accent2">{layer.title}</p>
+            <div key={layer.title} className="text-sm text-center md:text-left">
+              <p className="font-semibold text-lg md:text-sm text-accent2">{layer.title}</p>
               <p className="text-accent">{layer.desc}</p>
             </div>
           ))}

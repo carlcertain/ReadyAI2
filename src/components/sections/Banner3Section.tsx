@@ -16,7 +16,7 @@ export default function Banner3Section() {
         <QrCode className="absolute left-1/2 top-1/4 w-16 h-16 text-accent-light/10 z-0" />
 
 
-        <div className="grid grid-cols-2 gap-12 w-full max-w-7xl items-center relative z-10">
+        <div className="grid grid-cols-2 gap-0 w-full max-w-7xl items-center relative z-10">
           {/* Left Side */}
           <div className="flex flex-col items-center text-left space-y-6">
             <h2 className="text-3xl text-accent2 font-semibold">
