@@ -63,9 +63,6 @@ const FaqPage: React.FC = () => {
   return (
 
     <div>
-      
-      <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
-
       <div className="relative bg-gradient-to-br from-primary via-primary-light to-primary-dark overflow-hidden">
       {/* Abstract background patterns */}
       <div className="absolute inset-0 opacity-10">
@@ -95,14 +92,23 @@ const FaqPage: React.FC = () => {
               <h3 className="text-xl text-gray-700 font-semibold mb-2">
                 {faq.question}
               </h3>
-              <p className="text-accent-dark whitespace-pre-line">{faq.answer}</p>
+              {index == 9 && (
+                <p className="text-accent-dark whitespace-pre-line">{faq.answer}
+                  <a
+                    href="https://devs.ai/signup?ref=sales%40readyai.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 ml-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Explore Platform
+                  </a>
+                </p>
+              )}
             </div>
           ))}
         </div>
       </div>
     </div>
-    
-    <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
 
     </div>
   );
