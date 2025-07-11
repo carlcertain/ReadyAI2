@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Brain, Layers, TrendingDown, Check } from 'lucide-react';
+import { INDUSTRIES } from '../../utils/constants';
 
 const PricingSection1: React.FC = () => {
   const services = [
@@ -50,58 +51,6 @@ const PricingSection1: React.FC = () => {
       price: 'Plus more!',
       icon: '',
       color: ''
-    }
-  ];
-
-  const pricingTiers = [
-    {
-      name: 'Free',
-      price: '$0',
-      period: '/mo',
-      features: [
-        'Access to 20+ LLMs',
-        '2GB storage',
-        'Microsoft integration',
-        'Create unlimited agents',
-        'Use unlimited agents',
-        'Analytics on AI usage',
-        'Vector database & RAG pipeline',
-        'RAG & Python tools'
-      ]
-    },
-    {
-      name: 'Personal',
-      price: '$15',
-      period: '/mo/seat',
-      subtitle: '(7-day free trial)',
-      note: 'Paid annually',
-      monthlyNote: '$18/mo/seat if month to month',
-      popular: true,
-      features: [
-        'Access to all 30+ LLMs',
-        '10GB storage',
-        'All integrations',
-        'Unlimited chat history',
-        'Embed AI anywhere',
-        'Build workflows',
-        'Access to APIs',
-        '+All features in Free'
-      ]
-    },
-    {
-      name: 'Business',
-      price: '$30',
-      period: '/mo/seat',
-      note: 'Paid annually',
-      features: [
-        'Access to 30+ LLMs',
-        '20GB storage',
-        'Governance features',
-        'User permissions',
-        'Compliance tools',
-        'Advanced analytics',
-        '+All features in Personal'
-      ]
     }
   ];
 

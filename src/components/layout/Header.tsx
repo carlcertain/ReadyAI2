@@ -32,7 +32,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
             <img 
-              src="/readyai-logo.jpg" 
+              src="/readyai-logo.jpg"
               alt="ReadyAI" 
               className="h-8 w-auto"
             />

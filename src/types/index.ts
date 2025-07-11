@@ -12,6 +12,14 @@ export interface Solution {
   icon: string;
 }
 
+export interface Pricing {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  features: string[];
+}
+
 export interface NavItem {
   name: string;
   path: string;
