@@ -37,9 +37,9 @@ export default function Banner4Section() {
   return (
     <SlideAnimator direction="left">
     <div className="text-accent2 min-h-[500px] px-8 py-12">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-12 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl mx-auto">
         {/* Column 1: Left Text */}
-        <div className="flex flex-col items-center justify-center text-left space-y-4">
+        <div className="flex flex-col items-center justify-center text-center space-y-4">
           <div className="bg-black text-white p-4 rounded-xl text-2xl font-bold">
             {"</>"}
           </div>
@@ -59,7 +59,7 @@ export default function Banner4Section() {
                 style={{
                   top: `${index * 40}px`,
                   zIndex: layers.length - index,
-                  transform: `rotateX(70deg) rotateZ(45deg) scale(1.05)`,
+                  transform: `rotateX(70deg) rotateZ(45deg) scale(0.9)`,
                   opacity: 0.8,
                 }}
               />
