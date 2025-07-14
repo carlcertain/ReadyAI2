@@ -59,7 +59,7 @@ export default function Banner4Section() {
                 style={{
                   top: `${index * 40}px`,
                   zIndex: layers.length - index,
-                  transform: `rotateX(70deg) rotateZ(45deg) scale(0.9)`,
+                  transform: `rotateX(70deg) rotateZ(45deg) scale(0.5)`,
                   opacity: 0.8,
                 }}
               />

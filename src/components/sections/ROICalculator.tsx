@@ -80,7 +80,7 @@ const ROICalculator: React.FC = () => {
         </div>
 
         {calculated && (
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100 break-words">
             <h4 className="font-semibold text-blue-900 mb-3">Your Potential Savings</h4>
 
             <div className="grid grid-cols-2 gap-4">
