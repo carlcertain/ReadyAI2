@@ -67,11 +67,12 @@ const departments = [
 
 export default function Banner10Section() {
   return (
+    <SlideAnimator direction="up">
       <section className="relative bg-white py-20 px-6 md:px-20 overflow-hidden">
         {/* Translucent background shape */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-100/50 transform skew-x-[-20deg]"></div>
-        </div>
+        </div> */}
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <h2 className="text-center text-3xl md:text-4xl font-light text-accent-dark mb-12">
@@ -103,5 +104,6 @@ export default function Banner10Section() {
           </div>
         </div>
       </section>
+    </SlideAnimator>
   );
 }
