@@ -50,14 +50,14 @@ export default function Banner4Section() {
         </div>
 
         {/* Column 2: Stacked Rotated Layers */}
-        <div className="relative h-[500px] flex justify-center">
+        <div className="relative h-[400px] flex justify-center">
           <div className="relative w-64">
             {layers.map((layer, index) => (
               <div
                 key={layer.title}
                 className={`absolute w-full h-60 rounded-xl ${layer.color} shadow-md transform transition-all duration-300`}
                 style={{
-                  top: `${index * 40}px`,
+                  top: `${index * 30}px`,
                   zIndex: layers.length - index,
                   transform: `rotateX(70deg) rotateZ(45deg) scale(0.5)`,
                   opacity: 0.8,
