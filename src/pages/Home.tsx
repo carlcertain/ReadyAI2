@@ -34,7 +34,6 @@ const Home: React.FC = () => {
       <Banner6Section />
       <Banner7Section />
       <Banner9Section />
-      <Banner10Section />
       <FeaturesSection /> 
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
