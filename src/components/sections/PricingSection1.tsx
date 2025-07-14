@@ -140,7 +140,7 @@ const PricingSection1: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full md:w-1/2 bg-white p-8 md:p-16">
+        <div className="w-full md:w-1/2 bg-white md:p-16">
           <div className="max-w-2xl mx-auto">
             <div className="grid grid-cols-3 gap-4 mb-8 text-center">
               <div></div>

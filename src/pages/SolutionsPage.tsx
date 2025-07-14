@@ -145,7 +145,7 @@ const SolutionsPage: React.FC = () => {
                           <div className="bg-white p-6 rounded-lg border border-gray-200">
                             <h4 className="text-xl font-semibold mb-4 text-black">ReadyAI's Value</h4>
                             <div className="space-y-2 text-black">
-                              <p className="text-4xl font-bold text-accent">7 <span className="text-lg">AI subscriptions</span></p>
+                              <p className="text-4xl font-bold text-accent">7 <span className="text-lg">AI subscriptions +</span></p>
                               <p className="text-lg">offering <span className="font-bold text-accent">30+</span> AI models</p>
                               <p className="text-lg">rolled into <span className="font-bold text-accent">1</span> platform</p>
                               <p className="text-lg">at <span className="font-bold text-accent">~80%</span> discount</p>
@@ -322,7 +322,7 @@ const SolutionsPage: React.FC = () => {
                       Enterprise-Grade Security & Compliance
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                      ReadyAI's platform is built with security and compliance at its core. Our comprehensive security 
+                      The platform is built with security and compliance at its core. Our comprehensive security 
                       features and certifications ensure your AI operations meet the highest industry standards while 
                       protecting sensitive data and maintaining regulatory compliance.
                     </p>

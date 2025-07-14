@@ -44,11 +44,11 @@ const Home: React.FC = () => {
                 Calculate Your Potential Savings
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                No matter your industry, our platform can help you reduce costs while expanding AI capabilities. 
+                No matter your industry, the platform can help you reduce costs while expanding AI capabilities. 
                 Use our ROI calculator to see how much you could save by switching to our platform.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Our fixed price of $30 per user per month provides access to all platform features, 
+                A fixed price of $30 per user per month provides access to all platform features, 
                 including unlimited AI agents, all supported LLMs, and our comprehensive management tools.
               </p>
             </div>
