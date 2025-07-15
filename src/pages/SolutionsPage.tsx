@@ -47,11 +47,11 @@ const SolutionsPage: React.FC = () => {
   const totalDirectCost = aiProviders.reduce((sum, provider) => sum + provider.price, 0);
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 w-full max-w-full text-center md:text-left">
       {!selectedSolution ? (
         <div>
-          <div className="bg-primary py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-primary py-16 w-full">
+            <div className="w-full max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8">
               <h1 className="text-3xl font-extrabold text-white sm:text-4xl">
                 Complete AI Solution Suite
               </h1>
@@ -62,7 +62,7 @@ const SolutionsPage: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="w-full max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {SOLUTIONS.map(solution => {
                 const Icon = iconMap[solution.icon as keyof typeof iconMap];
@@ -100,8 +100,8 @@ const SolutionsPage: React.FC = () => {
         </div>
       ) : (
         <div>
-          <div className="bg-primary py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-primary py-16 w-full">
+            <div className="w-full max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8">
               <div className="lg:flex lg:items-center lg:justify-between">
                 <div>
                   <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
@@ -122,9 +122,9 @@ const SolutionsPage: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="w-full max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 py-12">
             <div className="prose prose-lg max-w-none">
-              <div className="bg-white rounded-lg shadow-sm p-8 space-y-8">
+              <div className="bg-white rounded-lg shadow-sm  space-y-8">
                 {solutionId === 'ai-agents' && (
                   <div className="space-y-6">
                     <h2 className="text-3xl font-bold text-primary border-b border-gray-200 pb-4">
@@ -136,11 +136,11 @@ const SolutionsPage: React.FC = () => {
                       previously required human intervention.
                     </p>
 
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-2xl font-semibold text-primary mb-6">
+                    <div className="bg-gray-50 rounded-lg">
+                      <h3 className="text-2xl font-semibold text-center md:text-left text-primary mb-6">
                         Unified Access to Leading AI Models
                       </h3>
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center md:text-left">
                         <div>
                           <div className="bg-white p-6 rounded-lg border border-gray-200">
                             <h4 className="text-xl font-semibold mb-4 text-black">ReadyAI's Value</h4>
@@ -182,7 +182,7 @@ const SolutionsPage: React.FC = () => {
                                 </div>
                               ))}
                               <div className="px-6 py-4 bg-blue-50">
-                                <div className="grid grid-cols-3 gap-4 font-bold">
+                                <div className="grid grid-cols-3 gap-4 font-bold break-words">
                                   <div>TOTAL</div>
                                   <div className="text-center">${totalDirectCost}/mo/seat</div>
                                   <div className="text-center text-accent">$30/mo/seat</div>
@@ -197,7 +197,7 @@ const SolutionsPage: React.FC = () => {
                       </div>
                     </div>
                     
-                    <div className="bg-gray-50 rounded-lg p-6">
+                    <div className="bg-gray-50 rounded-lg p-6 text-center md:text-left">
                       <h3 className="text-2xl font-semibold text-primary mb-4">Key Features</h3>
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start">
@@ -223,8 +223,8 @@ const SolutionsPage: React.FC = () => {
                       </ul>
                     </div>
                     
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-2xl font-semibold text-primary mb-4">Common Use Cases</h3>
+                    <div className="bg-gray-50 rounded-lg p-6 text-center md:text-left">
+                      <h3 className="text-2xl font-semibold text-primary mb-4 ">Common Use Cases</h3>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                         <li className="flex items-center space-x-2">
                           <ArrowRight className="h-5 w-5 text-accent" />
@@ -419,7 +419,7 @@ const SolutionsPage: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-10 border-t border-gray-200 pt-10">
+            <div className="mt-10 border-t border-gray-200 pt-10 text-center md:text-left">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Ready to explore this solution?</h3>
@@ -438,7 +438,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       )}
       
-    <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
+      <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
     </div>
   );
 };
