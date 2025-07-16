@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowRight, Search } from 'lucide-react';
-import { SOLUTIONS, INDUSTRIES } from '../utils/constants';
+import { SOLUTIONS, INDUSTRIES, PricingTiers, Services } from '../utils/constants';
 
 interface SearchResult {
   type: 'solution' | 'industry';
@@ -31,7 +31,19 @@ const SearchResults: React.FC = () => {
         description: industry.description,
         path: `/industry/${industry.id}`,
       })),
-    ].filter(result => 
+      ...PricingTiers.map(tier => ({
+        type: 'solution' as const,
+        title: tier.name,
+        description: `${tier.features.join(', ') + tier.keywords}`,
+        path: '/pricing',
+      })),
+      ...Services.map(service => ({
+        type: 'solution' as const,
+        title: service.name,
+        description: service.name,
+        path: '/pricing',
+      })),
+    ].filter(result =>
       result.title.toLowerCase().includes(query) ||
       result.description.toLowerCase().includes(query)
     );

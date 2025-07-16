@@ -62,6 +62,114 @@ export const INDUSTRIES: Industry[] = [
 
 
 
+ export const Services = [
+    {
+      name: 'OpenAI',
+      price: '$60/mo',
+      icon: '/assets/images/openai.png',
+      color: 'bg-green-500'
+    },
+    {
+      name: 'ANTHROPIC',
+      price: '$60/mo',
+      icon: '/assets/images/anthropic.png',
+      color: 'bg-orange-500'
+    },
+    {
+      name: 'Gemini',
+      price: '$30/mo',
+      icon: '/assets/images/gemini.png',
+      color: 'bg-blue-500'
+    },
+    {
+      name: 'cohere',
+      price: '$19/mo',
+      icon: '/assets/images/cohere.png',
+      color: 'bg-green-600'
+    },
+    {
+      name: 'Grok',
+      price: '$40/mo',
+      icon: '/assets/images/grok.png',
+      color: 'bg-black'
+    },
+    {
+      name: 'Meta',
+      price: 'Open source',
+      icon: '/assets/images/meta.png',
+      color: 'bg-blue-600'
+    },
+    {
+      name: 'deepseek',
+      price: 'Open source',
+      icon: '/assets/images/deepseek.png',
+      color: 'bg-purple-600'
+    },
+    {
+      name: '',
+      price: 'Plus more!',
+      icon: '',
+      color: ''
+    }
+  ];
+
+ export const PricingTiers = [
+    {
+      name: 'Free',
+      price: '$0',
+      period: '/mo',
+      keywords: 'price, pricing, free, cost',
+      features: [
+        'Access to 20+ LLMs',
+        '2GB storage',
+        'Microsoft integration',
+        'Create unlimited agents',
+        'Use unlimited agents',
+        'Analytics on AI usage',
+        'Vector database & RAG pipeline',
+        'RAG & Python tools'
+      ]
+    },
+    {
+      name: 'Personal',
+      price: '$15',
+      period: '/mo/seat',
+      keywords: '',
+      subtitle: '(7-day free trial)',
+      note: 'Paid annually',
+      monthlyNote: '$18/mo/seat if month to month',
+      popular: true,
+      features: [
+        'Access to all 30+ LLMs',
+        '10GB storage',
+        'All integrations',
+        'Unlimited chat history',
+        'Embed AI anywhere',
+        'Build workflows',
+        'Access to APIs',
+        '+All features in Free'
+      ]
+    },
+    {
+      name: 'Business',
+      price: '$30',
+      period: '/mo/seat',
+      keywords: '',
+      note: 'Paid annually',
+      features: [
+        'Access to 30+ LLMs',
+        '20GB storage',
+        'Governance features',
+        'User permissions',
+        'Compliance tools',
+        'Advanced analytics',
+        '+All features in Personal'
+      ]
+    }
+  ];
+
+
+
 export const NAVIGATION: NavItem[] = [
   {
     name: 'Home',

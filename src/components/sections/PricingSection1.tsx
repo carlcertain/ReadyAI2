@@ -1,110 +1,8 @@
 import React from 'react';
 import { Zap, Brain, Layers, TrendingDown, Check } from 'lucide-react';
-import { INDUSTRIES } from '../../utils/constants';
+import { INDUSTRIES, Services, PricingTiers } from '../../utils/constants';
 
 const PricingSection1: React.FC = () => {
-  const services = [
-    {
-      name: 'OpenAI',
-      price: '$60/mo',
-      icon: '/assets/images/openai.png',
-      color: 'bg-green-500'
-    },
-    {
-      name: 'ANTHROPIC',
-      price: '$60/mo',
-      icon: '/assets/images/anthropic.png',
-      color: 'bg-orange-500'
-    },
-    {
-      name: 'Gemini',
-      price: '$30/mo',
-      icon: '/assets/images/gemini.png',
-      color: 'bg-blue-500'
-    },
-    {
-      name: 'cohere',
-      price: '$19/mo',
-      icon: '/assets/images/cohere.png',
-      color: 'bg-green-600'
-    },
-    {
-      name: 'Grok',
-      price: '$40/mo',
-      icon: '/assets/images/grok.png',
-      color: 'bg-black'
-    },
-    {
-      name: 'Meta',
-      price: 'Open source',
-      icon: '/assets/images/meta.png',
-      color: 'bg-blue-600'
-    },
-    {
-      name: 'deepseek',
-      price: 'Open source',
-      icon: '/assets/images/deepseek.png',
-      color: 'bg-purple-600'
-    },
-    {
-      name: '',
-      price: 'Plus more!',
-      icon: '',
-      color: ''
-    }
-  ];
-
-  const pricingTiers = [
-    {
-      name: 'Free',
-      price: '$0',
-      period: '/mo',
-      features: [
-        'Access to 20+ LLMs',
-        '2GB storage',
-        'Microsoft integration',
-        'Create unlimited agents',
-        'Use unlimited agents',
-        'Analytics on AI usage',
-        'Vector database & RAG pipeline',
-        'RAG & Python tools'
-      ]
-    },
-    {
-      name: 'Personal',
-      price: '$15',
-      period: '/mo/seat',
-      subtitle: '(7-day free trial)',
-      note: 'Paid annually',
-      monthlyNote: '$18/mo/seat if month to month',
-      popular: true,
-      features: [
-        'Access to all 30+ LLMs',
-        '10GB storage',
-        'All integrations',
-        'Unlimited chat history',
-        'Embed AI anywhere',
-        'Build workflows',
-        'Access to APIs',
-        '+All features in Free'
-      ]
-    },
-    {
-      name: 'Business',
-      price: '$30',
-      period: '/mo/seat',
-      note: 'Paid annually',
-      features: [
-        'Access to 30+ LLMs',
-        '20GB storage',
-        'Governance features',
-        'User permissions',
-        'Compliance tools',
-        'Advanced analytics',
-        '+All features in Personal'
-      ]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
@@ -150,7 +48,7 @@ const PricingSection1: React.FC = () => {
 
             {/* Services */}
             <div className="space-y-4 mb-8">
-              {services.map((service, index) => (
+              {Services.map((service, index) => (
                 <div
                   key={index}
                   className="grid grid-cols-3 items-center gap-4 py-4 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
@@ -218,7 +116,7 @@ const PricingSection1: React.FC = () => {
           <h2 className="text-5xl font-bold text-white mb-16">Pricing</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {PricingTiers.map((tier, index) => (
               <div
                 key={index}
                 className={`rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
