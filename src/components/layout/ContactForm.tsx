@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        throw new Error(response.statusText);
       }
 
       setSubmitStatus('success');
