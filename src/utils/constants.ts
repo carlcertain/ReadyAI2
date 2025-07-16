@@ -134,7 +134,7 @@ export const INDUSTRIES: Industry[] = [
       name: 'Personal',
       price: '$15',
       period: '/mo/seat',
-      keywords: '',
+      keywords: 'price, pricing, free, cost',
       subtitle: '(7-day free trial)',
       note: 'Paid annually',
       monthlyNote: '$18/mo/seat if month to month',
@@ -154,7 +154,7 @@ export const INDUSTRIES: Industry[] = [
       name: 'Business',
       price: '$30',
       period: '/mo/seat',
-      keywords: '',
+      keywords: 'price, pricing, free, cost',
       note: 'Paid annually',
       features: [
         'Access to 30+ LLMs',
