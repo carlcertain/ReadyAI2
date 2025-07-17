@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
     }
     
     if (!formData.consent) {
-      newErrors.consent = 'You must accept the privacy policy';
+      newErrors.message = 'You must accept the privacy policy';
     }
     
     setErrors(newErrors);
@@ -216,7 +216,7 @@ const ContactForm: React.FC = () => {
             </a>{' '}
             and consent to having my personal data processed.
           </p>
-          {errors.consent && <p className="mt-1 text-sm text-red-600">{errors.consent}</p>}
+          {errors.consent && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
         </div>
       </div>
 
