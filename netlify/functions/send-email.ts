@@ -11,6 +11,13 @@ const transporter = createTransport({
   },
 });
 
+console.log(`SMTP configuration:
+  Host: ${process.env.SMTP_HOST}
+  Port: ${process.env.SMTP_PORT}
+  Secure: ${process.env.SMTP_SECURE}
+  User: ${process.env.SMTP_USER}
+  Pass: ${process.env.SMTP_PASS}`);
+
 export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
