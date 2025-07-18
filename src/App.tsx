@@ -16,6 +16,7 @@ import BlogPage from './pages/BlogPage';
 import FAQPage from './pages/FaqPage';
 import CookieConsent from './components/ui/CookieConsent';
 import { usePerformance } from './hooks/usePerformance';
+import Version from './pages/Version';
 
 function App() {
   const { trackCustomMetric } = usePerformance();
@@ -51,6 +52,7 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/version" element={<Version />} />
           </Routes>
         </main>
         <Footer />
