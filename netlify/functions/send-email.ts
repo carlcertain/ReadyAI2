@@ -55,7 +55,11 @@ export const handler: Handler = async (event) => {
     console.log("made to step 3");
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send email' }),
+      body: JSON.stringify({
+        error: 'Failed to send email',
+        details: error instanceof Error ? error.message : String(error),
+      }),
     };
+
   }
 };
