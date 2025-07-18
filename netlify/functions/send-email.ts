@@ -1,21 +1,10 @@
 import { Handler } from '@netlify/functions';
 import { createTransport } from 'nodemailer';
 
-const transporter = createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-
-
 export const handler: Handler = async (event) => {
+  console.log("🔧 Function called with event:", event);
+
   if (event.httpMethod !== 'POST') {
-    console.log("made to step 1");
     return {
       statusCode: 405,
       body: 'Method Not Allowed',
@@ -23,7 +12,24 @@ export const handler: Handler = async (event) => {
   }
 
   try {
-    const { to, subject, formData } = JSON.parse(event.body || '{}');
+    const body = JSON.parse(event.body || '{}');
+    const { to, subject, formData } = body;
+
+    console.log("📨 Parsed body:", body);
+
+    const transporter = createTransport({
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    // Test the connection
+    await transporter.verify();
+    console.log("✅ Transporter verified");
 
     const emailContent = `
       New Contact Form Submission
@@ -36,8 +42,7 @@ export const handler: Handler = async (event) => {
       Message:
       ${formData.message}
     `;
-    
-    console.log("made to step 2");
+
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to,
@@ -45,21 +50,17 @@ export const handler: Handler = async (event) => {
       text: emailContent,
     });
 
+    console.log("✅ Email sent successfully");
+
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     };
-  } catch (error) {
-    console.error('Error sending email:', JSON.stringify(error, null, 2));
-    
-    console.log("made to step 3");
+  } catch (error: any) {
+    console.error("❌ Error occurred:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: 'Failed to send email',
-        details: error instanceof Error ? error.message : String(error),
-      }),
+      body: JSON.stringify({ error: error.message || "Unknown error" }),
     };
-
   }
 };
