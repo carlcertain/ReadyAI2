@@ -15,6 +15,7 @@ const transporter = createTransport({
 
 export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
+    console.log("made to step 1");
     return {
       statusCode: 405,
       body: 'Method Not Allowed',
@@ -35,7 +36,8 @@ export const handler: Handler = async (event) => {
       Message:
       ${formData.message}
     `;
-
+    
+    console.log("made to step 2");
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to,
@@ -49,12 +51,8 @@ export const handler: Handler = async (event) => {
     };
   } catch (error) {
     console.error('Error sending email:', JSON.stringify(error, null, 2));
-console.log(`SMTP configuration:
-  Host: ${process.env.SMTP_HOST}
-  Port: ${process.env.SMTP_PORT}
-  Secure: ${process.env.SMTP_SECURE}
-  User: ${process.env.SMTP_USER}
-  Pass: ${process.env.SMTP_PASS}`);
+    
+    console.log("made to step 3");
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to send email' }),
