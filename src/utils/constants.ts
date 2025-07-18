@@ -206,9 +206,5 @@ export const NAVIGATION: NavItem[] = [
   {
     name: 'FAQ',
     path: '/faq'
-  },
-  {
-    name: 'Version',
-    path: '/version'
   }
 ];
