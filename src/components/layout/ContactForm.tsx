@@ -56,6 +56,7 @@ const ContactForm: React.FC = () => {
     setSubmitStatus(null);
 
     try {
+      console.log("Submitting form data:", formData);
       const response = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
         headers: {
