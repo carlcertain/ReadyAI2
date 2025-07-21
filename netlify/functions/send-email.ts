@@ -11,7 +11,7 @@ export const handler: Handler = async (event) => {
 
 return {
   statusCode: 200,
-  body: 'This is a serverless function for sending emails.',
+  body: 'SMTP host: ' + process.env.SMTP_HOST + 'response 200',
 }
 
   if (event.httpMethod !== 'POST') {
