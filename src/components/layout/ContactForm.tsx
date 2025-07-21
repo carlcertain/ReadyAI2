@@ -47,31 +47,43 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
+
+    if (!validateForm()) return;
 
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    const formName = 'contact';
+    const encodedForm = new URLSearchParams({
+      'form-name': formName,
+      name: formData.name,
+      company: formData.company,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      consent: formData.consent ? 'yes' : 'no',
+    });
+
     try {
-      console.log("Submitting form data:", formData);
+      // 1. Submit to Netlify Forms
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodedForm.toString(),
+      });
+
+      // 2. Submit to your serverless function
       const response = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           to: 'sales@readyai.dev',
           subject: 'New Contact Form Submission',
-          formData
+          formData,
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
+      if (!response.ok) throw new Error(response.statusText);
 
       setSubmitStatus('success');
       setFormData({
@@ -90,6 +102,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -107,7 +120,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form 
-      onSubmit="submit" 
+      onSubmit={handleSubmit}
       name="contact" 
       method="POST" 
       data-netlify="true" 
