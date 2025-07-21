@@ -107,7 +107,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form 
-      onSubmit={handleSubmit} 
+      onSubmit="submit" 
       name="contact" 
       method="POST" 
       data-netlify="true" 
