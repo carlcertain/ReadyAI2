@@ -113,6 +113,7 @@ const ContactForm: React.FC = () => {
       data-netlify="true" 
       netlify-honeypot="bot-field" 
       className="space-y-6"
+      netlify
     >
       {/* Netlify hidden fields */}
       <input type="hidden" name="form-name" value="contact" />
