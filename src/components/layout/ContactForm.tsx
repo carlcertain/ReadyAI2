@@ -106,7 +106,18 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form 
+      onSubmit={handleSubmit} 
+      name="contact" 
+      method="POST" 
+      data-netlify="true" 
+      netlify-honeypot="bot-field" 
+      className="space-y-6"
+    >
+      {/* Netlify hidden fields */}
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
+
       {submitStatus === 'success' && (
         <div className="bg-green-50 border border-green-200 rounded-md p-4 text-green-800">
           Thank you for your message. We'll be in touch soon!
