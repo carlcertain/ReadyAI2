@@ -2,17 +2,6 @@ import { Handler } from '@netlify/functions';
 import { createTransport } from 'nodemailer';
 
 export const handler: Handler = async (event) => {
-  
-  console.log("SMTP CONFIG", {
-  SMTP_HOST: process.env.SMTP_HOST,
-  SMTP_PORT: process.env.SMTP_PORT,
-  SMTP_USER: process.env.SMTP_USER,
-});
-
-return {
-  statusCode: 200,
-  body: 'SMTP host: ' + process.env.SMTP_HOST + 'response 200',
-}
 
   if (event.httpMethod !== 'POST') {
     return {
@@ -24,8 +13,6 @@ return {
   try {
     const body = JSON.parse(event.body || '{}');
     const { to, subject, formData } = body;
-
-    console.log("📨 Parsed body:", body);
 
     const transporter = createTransport({
       host: process.env.SMTP_HOST,
@@ -39,7 +26,6 @@ return {
 
     // Test the connection
     await transporter.verify();
-    console.log("✅ Transporter verified");
 
     const emailContent = `
       New Contact Form Submission
