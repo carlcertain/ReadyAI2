@@ -2,7 +2,17 @@ import { Handler } from '@netlify/functions';
 import { createTransport } from 'nodemailer';
 
 export const handler: Handler = async (event) => {
-  console.log("🔧 Function called with event:", event);
+  
+  console.log("SMTP CONFIG", {
+  SMTP_HOST: process.env.SMTP_HOST,
+  SMTP_PORT: process.env.SMTP_PORT,
+  SMTP_USER: process.env.SMTP_USER,
+});
+
+return {
+  statusCode: 200,
+  body: 'This is a serverless function for sending emails.',
+}
 
   if (event.httpMethod !== 'POST') {
     return {

@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
       //   }),
       // });
 
-      if (!response.ok) throw new Error(response.statusText);
+      //if (!response.ok) throw new Error(response.statusText);
 
       setSubmitStatus('success');
       setFormData({
