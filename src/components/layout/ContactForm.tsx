@@ -73,15 +73,15 @@ const ContactForm: React.FC = () => {
       });
 
       // 2. Submit to your serverless function
-      const response = await fetch('/.netlify/functions/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          to: 'sales@readyai.dev',
-          subject: 'New Contact Form Submission',
-          formData,
-        }),
-      });
+      // const response = await fetch('/.netlify/functions/send-email', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     to: 'sales@readyai.dev',
+      //     subject: 'New Contact Form Submission',
+      //     formData,
+      //   }),
+      // });
 
       if (!response.ok) throw new Error(response.statusText);
 
