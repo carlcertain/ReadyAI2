@@ -14,7 +14,7 @@ export default function Banner4Section() {
     },
     {
       title: "Integrated Tools",
-      desc: "GitHub, Atlassian, Google, Python,",
+      desc: "GitHub, Atlassian, Google, Python",
       color: "bg-gradient-to-br from-blue-800 to-blue-500",
     },
     {
@@ -24,7 +24,7 @@ export default function Banner4Section() {
     },
     {
       title: "Large Language Models",
-      desc: "GPT 4o, Claude Sonnet 3.7, R1 and more + Private LLMs",
+      desc: "GPT 4o, Claude Sonnet 3.7, R1 and more",
       color: "bg-gradient-to-br from-purple-700 to-purple-500",
     },
     {

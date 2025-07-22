@@ -92,12 +92,12 @@ const IndustryPage: React.FC = () => {
                     Calculate Your Potential Savings
                   </h2>
                   <p className="text-lg text-gray-600 mb-4">
-                    No matter your industry, our platform can help you reduce costs while expanding AI capabilities. 
-                    Use our ROI calculator to see how much you could save by switching to our platform.
+                    No matter your industry, our platform can help you reduce costs while expanding AI capabilities 
+                    Use our ROI calculator to see how much you could save by switching to our platform
                   </p>
                   <p className="text-lg text-gray-600 mb-6">
                     Our fixed price of $30 per user per month provides access to all platform features, 
-                    including unlimited AI agents, all supported LLMs, and our comprehensive management tools.
+                    including unlimited AI agents, all supported LLMs, and our comprehensive management tools
                   </p>
                 </div>
                 <div className="lg:col-span-5 mt-8 lg:mt-0">
@@ -139,8 +139,8 @@ const IndustryPage: React.FC = () => {
                     AI Solutions for Financial Services
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    In the fast-paced world of financial services, AI is revolutionizing everything from customer service to risk management. 
-                    Our platform provides a secure, compliant platform that enables financial institutions to deploy AI solutions with confidence.
+                    In the fast-paced world of financial services, AI is revolutionizing everything from customer service to risk management
+                    Our platform provides a secure, compliant platform that enables financial institutions to deploy AI solutions with confidence
                   </p>
                   
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -203,9 +203,9 @@ const IndustryPage: React.FC = () => {
                     AI Solutions for Retail
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    The retail industry faces intense competition and rapidly changing consumer expectations. 
+                    The retail industry faces intense competition and rapidly changing consumer expectations
                     Our platform helps retailers create personalized experiences, optimize operations, and build 
-                    stronger customer relationships through intelligent AI applications.
+                    stronger customer relationships through intelligent AI applications
                   </p>
                   
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -268,9 +268,9 @@ const IndustryPage: React.FC = () => {
                     AI Solutions for Healthcare & Life Sciences
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Healthcare organizations face unique challenges in balancing innovation with patient safety and regulatory compliance. 
+                    Healthcare organizations face unique challenges in balancing innovation with patient safety and regulatory compliance
                     Our platform provides a secure platform for deploying AI solutions that improve patient outcomes while maintaining the 
-                    highest standards of data protection and compliance.
+                    highest standards of data protection and compliance
                   </p>
                   
                   <div className="bg-gray-50 rounded-lg p-6">

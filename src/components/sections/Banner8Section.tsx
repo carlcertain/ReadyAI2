@@ -14,28 +14,27 @@ export default function Banner8Section() {
 
       {/* Content */}
       <div className="relative z-10 px-6 md:px-20 text-center max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-light text-accent-light">
-          <span className="font-bold">Transitioning from the </span><span className="font-bold text-accent-dark">AI chat era</span>
-          <span className="text-accent-light font-bold"> to the </span><span className="font-bold text-accent-dark">AI agent era</span>
-        </h2>
+        <h1 className="text-2xl md:text-4xl font-light text-accent-dark">
+           Transitioning to the AI agent era
+        </h1>
 
-        <p className="mt-2 text-red-400 text-lg font-medium">
-          The <span className="text-red-500 font-semibold">age of AI agents</span> has arrived
+        <p className="mt-2 text-gray-500 text-lg font-medium">
+          The <span className="text-gray-500 font-semibold">age of AI agents</span> has arrived
         </p>
 
         {/* Stats row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 text-accent text-center">
           <div>
-            <p className="text-6xl font-bold">82%</p>
-            <p className="mt-2 text-accent-light text-lg">
+            <p className="text-6xl text-accent">82%</p>
+            <p className="mt-2 text-accent2-dark text-lg">
               executives plan to <br />
               integrate AI agents <br />
               by 2028
             </p>
           </div>
           <div>
-            <p className="text-6xl font-bold">$50b</p>
-            <p className="mt-2 text-accent-light text-lg">
+            <p className="text-6xl">$50b</p>
+            <p className="mt-2 text-accent2-dark text-lg">
               size of AI agent <br />
               industry by 2030
             </p>

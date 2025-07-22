@@ -45,7 +45,7 @@ export default function Banner9Section() {
         {features.map(({ label, icon: Icon }, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center text-center bg-white rounded-xl shadow-md p-6 aspect-square hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center text-center bg-white rounded-xl shadow-md p-6 aspect-square hover:shadow-xl transition"
           >
             <Icon className="w-10 h-10 text-accent-dark mb-3" />
             {label && (

@@ -15,6 +15,7 @@ import Banner7Section from '../components/sections/Banner7Section';
 import Banner8Section from '../components/sections/Banner8Section';
 import Banner9Section from '../components/sections/Banner9Section';
 import Banner10Section from '../components/sections/Banner10Section';
+import SlideAnimator from '../utils/SlideAnimator';
 
 const Home: React.FC = () => {
   // Update the document title
@@ -26,16 +27,7 @@ const Home: React.FC = () => {
     <div>
       <HeroSection />
       <Banner1Section />
-      <Banner3Section />
-      <Banner2Section />
-      <Banner8Section />
-      <Banner4Section />
-      <Banner5Section />
-      <Banner6Section />
-      <Banner7Section />
-      <Banner9Section />
-      <Banner10Section />
-      <FeaturesSection /> 
+      <SlideAnimator direction="left">
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -58,6 +50,16 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      </SlideAnimator>
+      <Banner8Section />
+      <Banner4Section />
+      <Banner5Section />
+      <Banner6Section />
+      <Banner7Section />
+      <Banner2Section />
+      <Banner9Section />
+      <Banner10Section />
+      {/* <FeaturesSection />  */}
       {/* <IndustriesSection /> */}
       <Banner />
       <CtaSection />

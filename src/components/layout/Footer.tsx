@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <p className="text-gray-500 text-sm">
-                Simplify AI adoption with a secure, flexible platform that meets your specific business needs.
+                Simplify AI adoption with a secure, flexible platform that meets your specific business needs
               </p>
             </li>
           </ul>

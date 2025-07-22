@@ -44,7 +44,7 @@ const FeaturesSection: React.FC = () => {
             A better way to implement AI
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Simplify AI adoption with a secure, flexible platform that meets your specific business needs.
+            Simplify AI adoption with a secure, flexible platform that meets your specific business needs
           </p>
         </div>
 

@@ -1,16 +1,16 @@
 // components/Banner5Section.jsx
 import React from 'react';
-import { ShieldCheck, RefreshCw, Cpu } from 'lucide-react';
+import { ShieldCheck, RefreshCw, Cpu, Eclipse, BellPlus } from 'lucide-react';
 import SlideAnimator from '../../utils/SlideAnimator';
 
 const features = [
   {
-    icon: <ShieldCheck className="w-10 h-10 text-accent-light" />,
+    icon: <Eclipse className="w-10 h-10 text-accent-light" />,
     title: "The danger of shadow AI",
     description: "Your data becomes training data for AI",
   },
   {
-    icon: <RefreshCw className="w-10 h-10 text-accent-light" />,
+    icon: <BellPlus className="w-10 h-10 text-accent-light" />,
     title: "New models released weekly",
     description: "New LLMs become old news – fast",
   },

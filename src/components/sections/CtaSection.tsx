@@ -20,7 +20,7 @@ const CtaSection: React.FC = () => {
               </h2>
               <br />
               <p className="text-lg text-white mb-4">
-                Simplify AI adoption with a secure, flexible platform that meets your specific business needs.
+                Simplify AI adoption with a secure, flexible platform that meets your specific business needs
               </p>
             </div>
             <div className="lg:col-span-5 mt-8 lg:mt-0">

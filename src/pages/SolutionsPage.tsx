@@ -56,8 +56,8 @@ const SolutionsPage: React.FC = () => {
                 Complete AI Solution Suite
               </h1>
               <p className="mt-4 text-lg text-gray-100 max-w-3xl">
-                This is a enterprise-grade leading agentic AI creation and management platform—designed to bring artificial intelligence 
-                to every corner of the business. Discover our comprehensive suite of AI solutions.
+                This is an enterprise-grade leading agentic AI management platform—designed to bring artificial intelligence 
+                to every corner of the business. Discover our comprehensive suite of AI solutions
               </p>
             </div>
           </div>
@@ -259,7 +259,7 @@ const SolutionsPage: React.FC = () => {
                     <p className="text-lg text-gray-700 leading-relaxed">
                       Access a wide range of industry-leading large language models through a single platform. ReadyAI's provides
                       a unified interface to multiple LLMs, allowing you to choose the right model for each specific use case
-                      based on performance, cost, and specialized capabilities.
+                      based on performance, cost, and specialized capabilities
                     </p>
                     
                     <div className="bg-gray-50 rounded-lg p-6">
