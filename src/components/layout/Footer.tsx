@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SOLUTIONS } from '../../utils/constants';
+import { INDUSTRIES, SOLUTIONS, LEGAL, CONTACT } from '../../utils/constants';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-y-20 md:gap-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-y-14 md:gap-y-0 gap-x-6 items-start">
+
           {/* Logo & Description */}
           <ul className="space-y-6 text-center md:text-left items-center md:items-start">
             <li>
@@ -16,9 +16,6 @@ const Footer: React.FC = () => {
                 alt="ReadyAI" 
                 className="h-8 w-auto mx-auto md:mx-0"
               />
-            </li>     
-            <li>
-              <Link to="/contact" className="text-gray-500 hover:text-gray-900">Contact</Link>
             </li>
             <li>
               <p className="text-gray-500 text-sm">
@@ -26,6 +23,23 @@ const Footer: React.FC = () => {
               </p>
             </li>
           </ul>
+
+          {/* Contact */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+            <ul className="space-y-2">
+              {CONTACT.map((contact) => (
+                <li key={contact.id}>
+                  <Link 
+                    to={`/${contact.id}`} 
+                    className="text-gray-500 hover:text-gray-900"  
+                  >
+                    {contact.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Solutions */}
           <div className="text-center md:text-left">
@@ -48,12 +62,16 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Industries</h3>
             <ul className="space-y-2">
-              <li><Link to="/industry/financial" className="text-gray-500 hover:text-gray-900">Financial Services</Link></li>
-              <li><Link to="/industry/retail" className="text-gray-500 hover:text-gray-900">Retail</Link></li>
-              <li><Link to="/industry/healthcare" className="text-gray-500 hover:text-gray-900">Healthcare & Life Sciences</Link></li>
-              <li><Link to="/industry/manufacturing" className="text-gray-500 hover:text-gray-900">Manufacturing</Link></li>
-              <li><Link to="/industry/energy" className="text-gray-500 hover:text-gray-900">Energy & Utilities</Link></li>
-              <li><Link to="/industry/public" className="text-gray-500 hover:text-gray-900">Public Sector</Link></li>
+              {INDUSTRIES.map((industry) => (
+                <li key={industry.id}>
+                  <Link 
+                    to={`/industries/${industry.id}`} 
+                    className="text-gray-500 hover:text-gray-900"
+                  >
+                    {industry.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -61,9 +79,16 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link to="/privacy-policy" className="text-gray-500 hover:text-gray-900">Privacy Policy</Link></li>
-              <li><Link to="/terms-of-service" className="text-gray-500 hover:text-gray-900">Terms of Service</Link></li>
-              <li><Link to="/gdpr" className="text-gray-500 hover:text-gray-900">GDPR</Link></li>
+              {LEGAL.map((legal) => (
+                <li key={legal.id}>
+                  <Link 
+                    to={`/${legal.id}`} 
+                    className="text-gray-500 hover:text-gray-900"
+                  >
+                    {legal.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

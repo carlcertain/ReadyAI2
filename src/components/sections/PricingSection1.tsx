@@ -1,15 +1,17 @@
 import React from 'react';
-import { Zap, Brain, Layers, TrendingDown, Check } from 'lucide-react';
+import { Zap, Brain, Layers, TrendingDown, Check, HandCoins } from 'lucide-react';
 import { INDUSTRIES, Services, PricingTiers } from '../../utils/constants';
 
 const PricingSection1: React.FC = () => {
 
   return (
-    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
+      <HandCoins className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-accent2-light opacity-5 w-[800px] h-[800px] pointer-events-none select-none z-0" />
+      
       {/* Comparison Section */}
       <div className="flex flex-col md:flex-row min-h-screen">
         {/* Left Section */}
-        <div className="w-full md:w-1/2 bg-accent2 text-white p-8 md:p-16 flex flex-col rounded-3xl">
+        <div className="w-full md:w-1/2 bg-gradient-to-b from-accent2 to-gray-800 text-white p-8 md:p-16 flex flex-col rounded-3xl">
           <div className="max-w-md">
             <h1 className="text-4xl font-bold mb-12 leading-tight">
               ReadyAI value
@@ -51,7 +53,7 @@ const PricingSection1: React.FC = () => {
               {Services.map((service, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-3 items-center gap-4 py-4 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="grid grid-cols-3 items-center gap-4 py-4 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                 >
                   <div className="flex items-center gap-4">
                     {service.icon && (
@@ -111,16 +113,16 @@ const PricingSection1: React.FC = () => {
       <br />
 
       {/* Pricing Tiers */}
-      <div className="py-24 px-4 md:px-8 bg-accent2 rounded-3xl">
-        <div className="max-w-7xl mx-auto font-bold text-center">
-          <h2 className="text-5xl font-bold text-white mb-16">Pricing</h2>
+      <div className="py-24 px-4 md:px-8 rounded-3xl">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl text-accent2 mb-16">Pricing</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PricingTiers.map((tier, index) => (
               <div
                 key={index}
                 className={`rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
-                  tier.popular ? 'bg-white shadow-2xl border-4' : 'bg-white shadow-xl'
+                  tier.popular ? 'bg-white shadow-2xl border-4' : 'bg-white shadow-2xl'
                 }`}
                 style={tier.popular ? { borderColor: '#D4B36A' } : {}}
               >

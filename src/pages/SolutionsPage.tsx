@@ -111,13 +111,6 @@ const SolutionsPage: React.FC = () => {
                     {selectedSolution.description}
                   </p>
                 </div>
-                <div className="mt-5 lg:mt-0">
-                  <Link to="/solutions">
-                    <Button variant="outline" className="border-accent text-white hover:bg-primary-dark">
-                      All Solutions
-                    </Button>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -136,16 +129,16 @@ const SolutionsPage: React.FC = () => {
                       previously required human intervention.
                     </p>
 
-                    <div className="bg-gray-50 rounded-lg">
+                    <div className="bg-gray-50 rounded-lg p-6">
                       <h3 className="text-2xl font-semibold text-center md:text-left text-primary mb-6">
                         Unified Access to Leading AI Models
                       </h3>
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center md:text-left">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
                         <div>
                           <div className="bg-white p-6 rounded-lg border border-gray-200">
                             <h4 className="text-xl font-semibold mb-4 text-black">ReadyAI's Value</h4>
                             <div className="space-y-2 text-black">
-                              <p className="text-4xl font-bold text-accent">7 <span className="text-lg">AI subscriptions +</span></p>
+                              <p className="text-4xl font-bold text-accent">7 <span className="text-lg">AI subscriptions</span></p>
                               <p className="text-lg">offering <span className="font-bold text-accent">30+</span> AI models</p>
                               <p className="text-lg">rolled into <span className="font-bold text-accent">1</span> platform</p>
                               <p className="text-lg">at <span className="font-bold text-accent">~80%</span> discount</p>
@@ -365,55 +358,7 @@ const SolutionsPage: React.FC = () => {
                           <span><strong>Compliance Monitoring</strong> - Automated compliance checks and reporting</span>
                         </li>
                       </ul>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-2xl font-semibold text-primary mb-4">Compliance Standards</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-white p-6 rounded-lg border border-gray-200">
-                          <h4 className="text-lg font-semibold text-primary mb-4">Industry Standards</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>SOC 2 Type II certified</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>ISO 27001 certified</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>GDPR compliant</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>HIPAA compliant</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg border border-gray-200">
-                          <h4 className="text-lg font-semibold text-primary mb-4">Security Protocols</h4>
-                          <ul className="space-y-2">
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>AES-256 encryption</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>TLS 1.3 protocol</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>Multi-factor authentication</span>
-                            </li>
-                            <li className="flex items-center space-x-2">
-                              <ArrowRight className="h-5 w-5 text-accent" />
-                              <span>Regular security audits</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    </div>                    
                   </div>
                 )}
               </div>

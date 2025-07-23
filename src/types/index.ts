@@ -12,6 +12,16 @@ export interface Solution {
   icon: string;
 }
 
+export interface Legal {
+  id: string;
+  title: string;
+  description: string;
+}
+export interface Contact {
+  id: string;
+  title: string;
+}
+
 export interface Pricing {
   id: string;
   name: string;

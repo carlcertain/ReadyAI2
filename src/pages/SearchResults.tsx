@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowRight, Search } from 'lucide-react';
-import { SOLUTIONS, INDUSTRIES, PricingTiers, Services } from '../utils/constants';
+import { SOLUTIONS, INDUSTRIES, PricingTiers, Services, LEGAL } from '../utils/constants';
 
 interface SearchResult {
   type: 'solution' | 'industry';
@@ -43,6 +43,12 @@ const SearchResults: React.FC = () => {
         description: service.name,
         path: '/pricing',
       })),
+      ...LEGAL.map(legal => ({
+        type: 'solution' as const,
+        title: legal.title,
+        description: legal.description,
+        path: `/legal/${legal.id}`,
+      }))
     ].filter(result =>
       result.title.toLowerCase().includes(query) ||
       result.description.toLowerCase().includes(query)

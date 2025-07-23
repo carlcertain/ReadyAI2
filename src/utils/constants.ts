@@ -1,4 +1,4 @@
-import { Industry, Solution, NavItem } from '../types';
+import { Industry, Solution, NavItem, Legal, Contact } from '../types';
 
 export const SOLUTIONS: Solution[] = [
   {
@@ -59,6 +59,33 @@ export const INDUSTRIES: Industry[] = [
     icon: 'building',
   }
 ];
+
+
+export const LEGAL: Legal[] = [
+  {
+    id: 'privacy-policy',
+    title: 'Privacy Policy',
+    description: 'Learn about our privacy practices and how we handle your data.',
+  },
+  {
+    id: 'terms-of-service',
+    title: 'Terms of Service',
+    description: 'Review the terms governing the use of our services.',
+  },
+  {
+    id: 'gdpr',
+    title: 'GDPR',
+    description: 'Understand our compliance with GDPR regulations.',
+  }
+]
+
+
+export const CONTACT: Contact[] = [
+  {
+    id: 'contact',
+    title: 'Contact'
+  }
+]
 
 
 

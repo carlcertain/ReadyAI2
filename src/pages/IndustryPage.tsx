@@ -45,7 +45,7 @@ const IndustryPage: React.FC = () => {
                 Industry-Specific AI Solutions
               </h1>
               <p className="mt-4 text-xl text-gray-100 max-w-3xl">
-                Discover how the platform can be tailored to meet the unique challenges and opportunities in your industry.
+                Discover how the platform can be tailored to meet the unique challenges and opportunities in your industry
               </p>
             </div>
           </div>
