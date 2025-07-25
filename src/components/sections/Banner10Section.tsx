@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Sparkles } from 'lucide-react';
 import SlideAnimator from '../../utils/SlideAnimator';
 
 const departments = [
@@ -46,11 +46,11 @@ const departments = [
   {
     title: 'IT/Software Dev',
     items: [
-      'API documentation',
       'Coding',
       'IT troubleshooting',
       'Technical documentation',
       'System integration advice',
+      ' ',
     ],
   },
   {
@@ -84,20 +84,34 @@ export default function Banner10Section() {
                 key={idx}
                 className="transition transform hover:scale-105 duration-300 ease-in-out"
               >
-                <div className="bg-accent text-white text-center py-2 rounded-t-lg font-semibold text-xl md:text-2xl">
+
+                <div className="relative bg-accent text-white text-center py-2 rounded-t-lg text-xl md:text-xl overflow-hidden">
+                  
+                  {/* Decorative Background Icons */}
+                  <Sparkles className="absolute top-0 left-0 w-20 h-20 opacity-5 transform -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+                  <Sparkles className="absolute top-4 right-6 w-10 h-10 opacity-10 pointer-events-none" />
+                  <Sparkles className="absolute bottom-0 left-1/2 w-16 h-16 opacity-5 transform -translate-x-1/2 translate-y-1/3 pointer-events-none" />
+                  <Sparkles className="absolute bottom-2 right-2 w-12 h-12 opacity-15 pointer-events-none" />
+                  <Sparkles className="absolute top-1/2 left-1/4 w-24 h-24 opacity-5 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+                  {/* Foreground Text */}
                   {dept.title}
                 </div>
-                <div className="bg-accent2-light p-6 rounded-b-lg space-y-3 text-center md:text-left">
+
+                <div className="bg-accent2-lighter p-6 rounded-b-lg space-y-3 text-center md:text-left">
                   {dept.items.map((item, i) => (
                     <div
                       key={i}
-                      className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-2 text-base md:text-lg text-accent-dark"
+                      className="flex flex-row items-center justify-center md:justify-start gap-2 text-base md:text-lg text-accent-dark"
                     >
-                      <CheckCircle className="w-4 h-4 text-accent" />
+                      {(item.trim().length > 0) 
+                      ? <CheckCircle className="w-4 h-4 text-accent" /> 
+                      : <div className="invisible"> <br /> </div>}
                       <span>{item}</span>
                     </div>
                   ))}
                 </div>
+
               </div>
             ))}
           </div>

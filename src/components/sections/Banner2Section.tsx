@@ -8,7 +8,8 @@ import {
   Key,
   BarChart,
   FileText,
-  Shield
+  Shield,
+  Check
 } from 'lucide-react';
 import SlideAnimator from '../../utils/SlideAnimator.tsx';
 
@@ -51,8 +52,8 @@ const Banner2Section = () => {
               </h3>
               <div className="space-y-2">
                 <Feature icon={<Database />} text="SOC 2 Compliant" />
-                <Feature icon={<Settings />} text="Private Azure instances" />
-                <Feature icon={<Settings />} text="GDPR Compliant" />
+                <Feature icon={<Shield />} text="Private Azure instances" />
+                <Feature icon={<Check />} text="GDPR Compliant" />
                 <Feature icon={<Server />} text="On-prem deployment options" />
               </div>
             </div>

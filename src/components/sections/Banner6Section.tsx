@@ -19,9 +19,9 @@ export default function Banner6Section() {
           <span className="text-accent-light">is on the rise</span>
         </h2>
 
-        <p className="text-red-400 text-lg mt-4">
+        <p className="text-gray-500 text-lg mt-4">
           With free AI tools,{" "}
-          <span className="font-semibold text-red-500">
+          <span className="font-semibold text-gray-500">
             your data is their training data
           </span>
         </p>
