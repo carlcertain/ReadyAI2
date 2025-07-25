@@ -24,8 +24,8 @@ const Banner2Section = () => {
             <div className="flex items-center space-x-3 mb-6">
               <ShieldCheck className="text-accent w-10 h-10" />
               <h2 className="text-3xl font-bold">
-                <span className="text-accent2">Secure by default</span><br />
-                <span className="text-gray-400 text-lg">compliant by design</span>
+                <span className="text-accent2">Secure By Default</span><br />
+                <span className="text-gray-500 text-lg">compliant by design</span>
               </h2>
             </div>
           </div>
