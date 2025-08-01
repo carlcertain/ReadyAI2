@@ -1,5 +1,15 @@
 import { Industry, Solution, NavItem, Legal, Contact } from '../types';
 
+
+
+export const INSIGHTS = [
+  {
+    title: 'Private AI Workspaces',
+    description: 'shadow ai',
+    keywords: 'private ai, workspaces, shadow ai',
+  }
+];
+
 export const SOLUTIONS: Solution[] = [
   {
     id: 'ai-agents',
@@ -222,6 +232,14 @@ export const NAVIGATION: NavItem[] = [
     name: 'Pricing',
     path: '/pricing'
   },
+  {
+    name: 'FAQ',
+    path: '/faq'
+  },
+  {
+    name: 'Insights',
+    path: '/insights',
+  }
   // {
   //   name: 'Resources',
   //   path: '/resources'
@@ -230,8 +248,4 @@ export const NAVIGATION: NavItem[] = [
   //   name: 'Blog',
   //   path: '/blog'
   // },
-  {
-    name: 'FAQ',
-    path: '/faq'
-  }
 ];

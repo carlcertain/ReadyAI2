@@ -17,6 +17,7 @@ import FAQPage from './pages/FaqPage';
 import CookieConsent from './components/ui/CookieConsent';
 import { usePerformance } from './hooks/usePerformance';
 import Version from './pages/Version';
+import InsightsPage from './pages/InsightsPage';
 
 function App() {
   const { trackCustomMetric } = usePerformance();
@@ -48,10 +49,11 @@ function App() {
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/gdpr" element={<GdprPolicy />} />            
-            <Route path="/pricing" element={<PricingPage />} />     
+            <Route path="/pricing" element={<PricingPage />} />         
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/insights" element={<InsightsPage />} />   
             <Route path="/version" element={<Version />} />
           </Routes>
         </main>

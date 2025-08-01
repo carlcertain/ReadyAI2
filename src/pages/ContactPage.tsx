@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone,MapPin } from 'lucide-react';
 import ContactForm from '../components/layout/ContactForm';
 import CalendlySectionPopUp from '../components/sections/CalendlySectionPopUp';
 
@@ -61,6 +61,21 @@ const ContactPage: React.FC = () => {
                     className="mt-1 text-gray-500 hover:text-accent"
                   >
                     949 444 5881
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-accent" />
+                </div>
+                <div className="ml-3 text-base">
+                  <p className="font-medium text-gray-900">Address</p>
+                  <a 
+                    href="tel:888-778-6864" 
+                    className="mt-1 text-gray-500 hover:text-accent"
+                  >
+                    Irvine, California 92614
                   </a>
                 </div>
               </div>
