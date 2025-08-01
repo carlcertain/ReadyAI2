@@ -60,7 +60,7 @@ const InsightsPage: React.FC = () => {
             <p className="mb-6 font-light">
               The term, Shadow AI, refers to the use of artificial intelligence tools or systems within an organization without formal IT approval, governance, or oversight. These could be items such as:
             </p>
-            <ul className="list-disc mb-6 mr-6 pl-8">
+            <ul className="list-disc mb-6 mr-6 pl-8 text-center md:text-left">
               <li>Apps</li>
               <li>Large Language Models (LLMs)</li>
               <li>Plugins</li>
@@ -317,7 +317,7 @@ const InsightsPage: React.FC = () => {
             <h4 className="text-2xl font-semibold mt-20 mb-20 text-center">
               Sources:
             </h4>
-            <ul className="mb-6 mr-6 italic text-blue-700">
+            <ul className="mb-6 mr-6 italic text-blue-700 text-sm md:text-base text-center md:text-left">
               <li>
                 <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work">
                   AI in the Workplace: A report for 2025 - McKinsey
