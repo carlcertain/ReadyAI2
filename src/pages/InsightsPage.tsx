@@ -29,7 +29,7 @@ const InsightsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="md:mt-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="md:mt-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-7xl mx-auto text-left">
           <h2 className="text-4xl text-gray-700 mb-16 text-center">
             What Is Shadow AI And Why It Is A Growing Risk For Enterprises
