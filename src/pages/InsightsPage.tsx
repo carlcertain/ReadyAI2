@@ -37,7 +37,7 @@ const InsightsPage: React.FC = () => {
           <h2 className="text-4xl text-gray-700 mb-16 text-center">What Is Shadow AI And Why It Is A Growing Risk For Enterprises</h2>
             <div className="flex flex-col min-h-screen text-lg leading-loose tracking-wide"> 
                 <img
-                src="dist/assets/images/shadow_ai.jpeg"
+                src="/assets/images/shadow_ai.jpeg"
                 alt="Shadow AI"
                 className="object-cover w-full md:w-full h-64 rounded-lg mx-auto mb-8 md:mb-20 flex-shrink-0"
                 />
