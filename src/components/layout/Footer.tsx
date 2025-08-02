@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { INDUSTRIES, SOLUTIONS, LEGAL, CONTACT } from '../../utils/constants';
+import { INDUSTRIES, SOLUTIONS, LEGAL, CONTACT, ABOUT } from '../../utils/constants';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-y-20 md:gap-y-0">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-y-14 md:gap-y-0 gap-x-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-y-14 md:gap-y-0 gap-x-6 items-start">
 
           {/* Logo & Description */}
           <ul className="space-y-6 text-center md:text-left items-center md:items-start">
@@ -35,6 +35,23 @@ const Footer: React.FC = () => {
                     className="text-gray-500 hover:text-gray-900"  
                   >
                     {contact.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* About */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">About Us</h3>
+            <ul className="space-y-2">
+              {ABOUT.map((about) => (
+                <li key={about.id}>
+                  <Link 
+                    to={`/${about.id}`} 
+                    className="text-gray-500 hover:text-gray-900"  
+                  >
+                    {about.title}
                   </Link>
                 </li>
               ))}
@@ -81,7 +98,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {LEGAL.map((legal) => (
                 <li key={legal.id}>
-                  <Link 
+                  <Link
                     to={`/${legal.id}`} 
                     className="text-gray-500 hover:text-gray-900"
                   >

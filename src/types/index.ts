@@ -17,7 +17,13 @@ export interface Legal {
   title: string;
   description: string;
 }
+
 export interface Contact {
+  id: string;
+  title: string;
+}
+
+export interface About {
   id: string;
   title: string;
 }

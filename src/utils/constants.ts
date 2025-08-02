@@ -1,4 +1,4 @@
-import { Industry, Solution, NavItem, Legal, Contact } from '../types';
+import { Industry, Solution, NavItem, Legal, Contact, About } from '../types';
 
 
 
@@ -94,6 +94,14 @@ export const CONTACT: Contact[] = [
   {
     id: 'contact',
     title: 'Contact'
+  }
+]
+
+
+export const ABOUT: About[] = [
+  {
+    id: 'about',
+    title: 'About'
   }
 ]
 
