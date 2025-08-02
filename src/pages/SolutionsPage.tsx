@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { SOLUTIONS } from '../utils/constants';
-import { ArrowRight, Brain, Cpu, LayoutDashboard, Shield, TrendingDown } from 'lucide-react';
+import { Services, SOLUTIONS } from '../utils/constants';
+import { ArrowRight, Brain, Cpu, Layers, LayoutDashboard, Shield, TrendingDown, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
 import FloatingButton from '../utils/FloatingButton';
 
@@ -129,66 +129,107 @@ const SolutionsPage: React.FC = () => {
                       previously required human intervention.
                     </p>
 
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-2xl font-semibold text-center md:text-left text-primary mb-6">
-                        Unified Access to Leading AI Models
-                      </h3>
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
-                        <div>
-                          <div className="bg-white p-6 rounded-lg border border-gray-200">
-                            <h4 className="text-xl font-semibold mb-4 text-black">ReadyAI's Value</h4>
-                            <div className="space-y-2 text-black">
-                              <p className="text-4xl font-bold text-accent">7 <span className="text-lg">AI subscriptions</span></p>
-                              <p className="text-lg">offering <span className="font-bold text-accent">30+</span> AI models</p>
-                              <p className="text-lg">rolled into <span className="font-bold text-accent">1</span> platform</p>
-                              <p className="text-lg">at <span className="font-bold text-accent">~80%</span> discount</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                            <div className="divide-y divide-gray-200">
-                              <div className="px-6 py-4 bg-gray-50">
-                                <div className="grid grid-cols-3 gap-4">
-                                  <div className="font-semibold">Provider</div>
-                                  <div className="font-semibold text-center">Direct sub</div>
-                                  <div className="font-semibold text-center">ReadyAI's</div>
-                                </div>
-                              </div>
-                              {aiProviders.map((provider, index) => (
-                                <div key={index} className="px-6 py-4">
-                                  <div className="grid grid-cols-3 gap-4 items-center">
-                                    <div>{provider.name}</div>
-                                    <div className="text-center">
-                                      {provider.label ? (
-                                        <span className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-                                          {provider.label}
-                                        </span>
-                                      ) : (
-                                        <span>${provider.price}/mo</span>
-                                      )}
-                                    </div>
-                                    <div className="text-center text-accent">
-                                      All Models Included
-                                    </div>
-                                  </div>
-                                </div>
-                              ))}
-                              <div className="px-6 py-4 bg-blue-50">
-                                <div className="grid grid-cols-3 gap-4 font-bold break-words">
-                                  <div>TOTAL</div>
-                                  <div className="text-center">${totalDirectCost}/mo/seat</div>
-                                  <div className="text-center text-accent">$30/mo/seat</div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="px-6 py-3 bg-gray-50 text-sm text-gray-500 text-right">
-                              Price of Enterprise Tiers Shown
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    {/* Comparison Section */}
+      <div className="flex flex-col md:flex-row min-h-screen">
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 bg-gradient-to-b from-accent2 to-gray-800 text-white p-8 md:p-16 flex flex-col rounded-3xl">
+          <div className="max-w-md">
+            <h1 className="text-4xl font-bold mb-12 leading-tight">
+              ReadyAI value
+            </h1>
+            <div className="space-y-8">
+              {[ 
+                { icon: Brain, title: '7+', subtitle: 'AI subscriptions' },
+                { icon: Layers, title: '30+', subtitle: 'offering AI models' },
+                { icon: Zap, title: '1', subtitle: 'rolled into one platform' },
+                { icon: TrendingDown, title: '~80%', subtitle: 'discount' }
+              ].map(({ icon: Icon, title, subtitle }, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className={`text-${title.includes('%') ? '4xl' : '5xl'} font-bold text-accent-light`}>
+                      {title}
                     </div>
+                    <div className="text-xl text-accent">{subtitle}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="w-full md:w-1/2 bg-white md:p-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 mb-8 text-center">
+              <div></div>
+              <h2 className="text-2xl font-bold text-gray-900">Direct sub</h2>
+              <h2 className="text-2xl font-bold text-gray-900">ReadyAI</h2>
+            </div>
+
+            {/* Services */}
+            <div className="space-y-4 mb-8">
+              {Services.map((service, index) => (
+                <div
+                  key={index}
+                  className="grid grid-cols-3 items-center gap-4 py-4 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                >
+                  <div className="flex items-center gap-4">
+                    {service.icon && (
+                      <img
+                        src={service.icon}
+                        alt={service.name}
+                        className="w-40 sm:w-40 h-auto object-contain max-w-full"
+                      />
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <span className="text-lg font-medium text-gray-700">{service.price}</span>
+                  </div>
+                  <div className="text-center">
+                    {service.name && (
+                      <span className="text-lg font-medium text-accent-dark">All Models Included</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Total */}
+            <div className="border-t-2 border-gray-200 pt-6">
+              <div className="grid grid-cols-3 gap-4 items-center">
+                <div>
+                  <span className="text-2xl font-bold text-gray-900">TOTAL</span>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-red-600">$210</div>
+                  <div className="text-sm text-gray-500">/mo/seat</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-600">$30</div>
+                  <div className="text-sm text-gray-500">/mo/seat</div>
+                  <div className="mt-2">
+                    <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                      Save 86%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center">
+              <a href="https://devs.ai/signup?ref=sales%40readyai.dev">
+                <button className="bg-accent hover:bg-accent-dark text-white font-bold py-4 px-12 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                  Get Started with ReadyAI
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
                     
                     <div className="bg-gray-50 rounded-lg p-6 text-center md:text-left">
                       <h3 className="text-2xl font-semibold text-primary mb-4">Key Features</h3>
