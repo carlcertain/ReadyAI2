@@ -100,7 +100,7 @@ export const CONTACT: Contact[] = [
 
 export const ABOUT: About[] = [
   {
-    id: 'about',
+    id: 'about-us',
     title: 'About'
   }
 ]
