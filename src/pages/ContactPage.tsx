@@ -60,7 +60,8 @@ const ContactPage: React.FC = () => {
                     href="tel:888-778-6864" 
                     className="mt-1 text-gray-500 hover:text-accent"
                   >
-                    949 444 5881
+                    {/* 949 444 5881 */}
+                    949-402-7053
                   </a>
                 </div>
               </div>
