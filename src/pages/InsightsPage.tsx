@@ -48,7 +48,7 @@ const InsightsPage: React.FC = () => {
               What is Shadow AI, and are you ahead or behind this trend? How vigilant is your IT department in handling it? You could be walking on thin ice when it comes to compliance and potential regulatory violations.
             </p>
             <p className="mb-6 font-light">
-              Research from a McKinsey report, entitled “AI in the Workplace - A Report for 2025,” shows employees are using GenAI more than their leaders. Beyond a doubt, Shadow AI is now becoming a high-priority risk for CIOs, CTOs, and HR leaders.
+              Research from a McKinsey report, entitled <a target="_blank" className="text-blue-700" href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work">“AI in the Workplace - A Report for 2025,”</a> shows employees are using GenAI more than their leaders. Beyond a doubt, Shadow AI is now becoming a high-priority risk for CIOs, CTOs, and HR leaders.
             </p>
             <p className="mb-6 font-light">
               This article provides an in-depth look at ShadowAI. It explains why it is spreading and outlines the business risks it poses to enterprises. Learn how you can respond as an IT or HR leader with secure, governed AI strategies.
@@ -67,7 +67,7 @@ const InsightsPage: React.FC = () => {
               <li>Tools</li>
             </ul>
             <p className="mb-6 font-light">
-              <a className="text-blue-700" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">Generative AI (GenAI)</a> has taken enterprises by storm. You can’t blame your employees for using AI. Employees want to use it to make their work easier. The two most common reasons are to complete tasks more quickly and to automate them.
+              <a target="_blank" className="text-blue-700" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">Generative AI (GenAI)</a> has taken enterprises by storm. You can’t blame your employees for using AI. Employees want to use it to make their work easier. The two most common reasons are to complete tasks more quickly and to automate them.
             </p>
             <p className="mb-6 font-light">
               Is this good for business, as surely it can lead to higher productivity rates? Yes and no. Productivity may increase in the short term. But over the longer term, Shadow AI will cause serious problems unless you have IT oversight.
@@ -131,7 +131,7 @@ const InsightsPage: React.FC = () => {
               <li>
                 Lack of Internal AI Strategy or Approved Tools
                 <p className="mb-6 font-light">
-                  At <a href="https://readyai.dev" className="text-blue-700">ReadyAI.dev</a>, we understand your dilemma. AI feels like yet another level of work you must urgently attend to. However, when you are busy, an internal AI strategy might start sliding down your list of urgent things to do.
+                  At <a target="_blank" href="https://readyai.dev" className="text-blue-700">ReadyAI.dev</a>, we understand your dilemma. AI feels like yet another level of work you must urgently attend to. However, when you are busy, an internal AI strategy might start sliding down your list of urgent things to do.
                 </p>
                 <p className="mb-6 font-light">
                   Indeed, we find most companies do not have a formal AI governance plan or secure alternatives. It’s a challenging situation to be in. We work closely with IT leaders in your position daily to help them resolve it.
@@ -178,7 +178,7 @@ const InsightsPage: React.FC = () => {
               </p>
               <li>Operational Silos and Inconsistency
                 <p className="mb-6 font-light">
-                  Teams might be adopting different tools, but there is no central control. It can lead to inconsistent decision-making, duplicated AI efforts, and conflicting outputs. There is also a high risk of the productivity paradox, with fast but fragmented operations.
+                  Teams might be adopting different tools, but there is no central control. It can lead to inconsistent decision-making, duplicated AI efforts, and conflicting outputs. There is also <a target="_blank" className="text-blue-700" href="https://www.afr.com/policy/economy/how-ai-risks-repeating-the-it-productivity-paradox-20250727-p5mi5j">a high risk of the productivity paradox</a>, with fast but fragmented operations.
                 </p>
               </li>
               <li>Security Vulnerabilities
@@ -188,7 +188,7 @@ const InsightsPage: React.FC = () => {
               </li>
               <li>Trust and Reputational Damage
                 <p className="mb-6 font-light">
-                  Your errors or AI-generated hallucinations could become public knowledge. For example, big law firms are now facing legal issues because they are submitting court filings with <a className="text-blue-700" href="https://www.reuters.com/legal/government/trouble-with-ai-hallucinations-spreads-big-law-firms-2025-05-23/">made-up citations from AI chatbots.</a>
+                  Your errors or AI-generated hallucinations could become public knowledge. For example, big law firms are now facing legal issues because they are submitting court filings with <a target="_blank" className="text-blue-700" href="https://www.reuters.com/legal/government/trouble-with-ai-hallucinations-spreads-big-law-firms-2025-05-23/">made-up citations from AI chatbots.</a>
                 </p>
                 <p className="mb-6 font-light">
                   There have also been cases of AI-generated customer communications with incorrect or biased information. All these instances can lead to a loss of stakeholder trust when data misuse goes public.
@@ -217,7 +217,7 @@ const InsightsPage: React.FC = () => {
 
             <h4 className="font-semibold">Real-World Scenario</h4>
             <p className="mb-6 font-light">
-              To put the costs into perspective, consider the case of three Samsung engineers who <a href="https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code" className="text-blue-700">used ChatGPT to fix proprietary code</a>. This action resulted in a total ban of ChatGPT and other GenAI tools across the company.
+              To put the costs into perspective, consider the case of three Samsung engineers who <a target="_blank" href="https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code" className="text-blue-700">used ChatGPT to fix proprietary code</a>. This action resulted in a total ban of ChatGPT and other GenAI tools across the company.
             </p>
 
             <h4 className="text-2xl font-semibold mt-20 mb-20 text-center">
@@ -268,7 +268,7 @@ const InsightsPage: React.FC = () => {
                 <li>Integrated with enterprise workflows</li>
               </ul>
               <p className="mb-6 font-light">
-                For example, ReadyAI.dev’s secure enterprise AI platform has built-in data safeguards for GDPR, SOC II, and HIPAA.
+                For example, <a target="_blank" className="text-blue-700" href="https://readyai.dev/solutions/security">ReadyAI.dev’s secure enterprise AI platform</a> has built-in data safeguards for GDPR, SOC II, and HIPAA.
               </p>              
               <li>
                 Step 5: Train Employees and Enable Responsible Use              
@@ -311,7 +311,7 @@ const InsightsPage: React.FC = () => {
               Shadow AI is not a fringe issue that might become a problem. It’s an enterprise-wide reality. However, if you use the right approach with governance, visibility, and a secure platform, you will manage it.
             </p>
             <p className="mb-6 font-light">
-              The future of enterprise AI is not about banning tools but about building trust and control. We can help you bring GenAI under enterprise control. <a href="https://readyai.dev/contact" className="text-blue-700">Book a demo</a> to see ReadyAI.dev in action and learn how it can support your AI strategy.
+              The future of enterprise AI is not about banning tools but about building trust and control. We can help you bring GenAI under enterprise control. <a target="_blank" href="https://readyai.dev/contact" className="text-blue-700">Book a demo</a> to see ReadyAI.dev in action and learn how it can support your AI strategy.
             </p>
 
             <h4 className="text-2xl font-semibold mt-20 mb-20 text-center">
@@ -319,27 +319,27 @@ const InsightsPage: React.FC = () => {
             </h4>
             <ul className="mb-6 mr-6 italic text-blue-700 text-sm md:text-base text-center md:text-left">
               <li>
-                <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work">
+                <a target="_blank" href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work">
                   AI in the Workplace: A report for 2025 - McKinsey
                 </a>
               </li>
               <li>
-                <a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">
                   Generative Artificial Intelligence - Wikipedia
                 </a>
               </li>
               <li>
-                <a href="https://www.afr.com/policy/economy/how-ai-risks-repeating-the-it-productivity-paradox-20250727-p5mi5j">
+                <a target="_blank" href="https://www.afr.com/policy/economy/how-ai-risks-repeating-the-it-productivity-paradox-20250727-p5mi5j">
                   How AI Risks Repeating the IT Productivity Paradox - Financial Review
                 </a>
               </li>
               <li>
-                <a href="https://www.reuters.com/legal/government/trouble-with-ai-hallucinations-spreads-big-law-firms-2025-05-23/">
+                <a target="_blank" href="https://www.reuters.com/legal/government/trouble-with-ai-hallucinations-spreads-big-law-firms-2025-05-23/">
                   Trouble With AI Hallucinations Spreads To Big Law Firms - Reuters
                 </a>
               </li>
               <li>
-                <a href="https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code">
+                <a target="_blank" href="https://www.pcmag.com/news/samsung-bans-chatgpt-after-engineers-use-it-to-fix-proprietary-code">
                   Samsung Bans ChatGPT After Engineers Use it to Fix Proprietary Code - PC Mag
                 </a>
               </li>
