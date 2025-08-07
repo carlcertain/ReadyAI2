@@ -31,7 +31,7 @@ const IndustryPage: React.FC = () => {
 
   React.useEffect(() => {
     document.title = selectedIndustry 
-      ? `${selectedIndustry.name} - ReadyAI` 
+      ? `${selectedIndustry.name} - ReadyAI`
       : 'Industries - ReadyAI';
   }, [selectedIndustry]);
 
