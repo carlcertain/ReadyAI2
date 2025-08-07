@@ -55,6 +55,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/insights" element={<InsightsPage />} />  
+            <Route path="/insights/:articleName" element={<InsightsPage />} />
             <Route path="/about-us" element={<AboutPage />} />   
             <Route path="/version" element={<Version />} />
           </Routes>

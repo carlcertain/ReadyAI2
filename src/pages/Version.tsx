@@ -10,12 +10,11 @@ const Version = () => {
 
         <div className="mt-16 text-center">
           <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            Development Version 1.1.7
+            Version 1.1.9
           </div>
         </div>
       </div>
     </div>
   );
-};
 
 export default Version;
