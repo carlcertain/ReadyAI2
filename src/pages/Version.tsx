@@ -16,5 +16,6 @@ const Version = () => {
       </div>
     </div>
   );
+}
 
 export default Version;
