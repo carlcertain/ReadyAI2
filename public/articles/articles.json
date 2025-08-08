@@ -14,5 +14,13 @@
     "image": "/assets/images/shadow_ai.jpeg",
     "metaDescription": "Discover what Shadow AI is, how it relates to Shadow IT, and why it poses a growing risk to enterprise security, compliance, and data",
     "metaKeywords": "Shadow AI"
+  },
+  {
+    "title": "This is my test title",
+    "path": "This is my test title", 
+    "url": "this-is-my-test-title",
+    "image": "/assets/images/test_image.jpeg",
+    "metaDescription": "test description here for meta tag",
+    "metaKeywords": "keyword1, keyword2"
   }
 ]
