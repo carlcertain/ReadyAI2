@@ -38,9 +38,11 @@ const WordDocParser = ({ docPath }) => {
           el.classList.add('list-disc', 'pl-8', 'mb-6', 'mr-6', 'text-center', 'md:text-left')
         );
         
-        doc.querySelectorAll('a').forEach(el =>
-          el.classList.add('text-blue-700')
-        );
+        doc.querySelectorAll('a').forEach(el => {
+          el.classList.add('text-blue-700');
+          el.setAttribute('target', '_blank');
+        });
+
 
         setHtmlContent(doc.body.innerHTML);
       } catch (err) {

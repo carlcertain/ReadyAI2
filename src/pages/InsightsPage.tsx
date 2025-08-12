@@ -40,6 +40,7 @@ const InsightsPage: React.FC = () => {
 
   return (
     <div>
+      {/* PAGE META-DATA */}
       {currArticle?.title && (
         <Helmet>
           <title>ReadyAI - {currArticle?.title}</title>
@@ -72,26 +73,40 @@ const InsightsPage: React.FC = () => {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-7xl mx-auto text-left">
-          <h2 className="text-4xl text-gray-700 mb-16 text-center">
-            {/* You can add a heading here if needed */}
+          <h2 className="text-4xl text-gray-700 mb-40 mt-6 text-center tracking-widest">
+            {!articleName && (<span>LATEST POSTS</span>)}
           </h2>
 
-          {/* Article List */}
+          {/* Main Article List */}
           {!articleName && (
-            <ul className="space-y-2 text-xl">
+            <ul className="space-y-4 text-xl mb-20">
               {articles.map((article, idx) => (
-                <li key={idx} className="mb-10">
-                  <span>{idx+1}. </span>
-                  <button
-                    className="text-blue-600 underline hover:text-blue-800"
-                    onClick={() => onSelect(`${article.url}`)}
+                  <li
+                    key={idx}
+                    className="flex items-start space-x-4 mb-20"
                   >
-                    {article.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-40 h-20 object-cover rounded flex-shrink-0"
+                    />
+                    <div>
+                      <button
+                        className="text-blue-600 underline hover:text-blue-800 block text-left"
+                        onClick={() => onSelect(article.url)}
+                      >
+                        {article.title}
+                      </button>
+                      <p className="text-gray-600 text-base mt-1">
+                        {article.metaDescription}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
           )}
+
+
 
           
           {currArticle && (
