@@ -79,7 +79,7 @@ const InsightsPage: React.FC = () => {
 
           {/* Main Article List */}
           {!articleName && (
-            <ul className="space-y-4 text-xl mb-20">
+            <ul className="text-xl mb-20">
               {articles.map((article, idx) => (
                   <li
                     key={idx}
