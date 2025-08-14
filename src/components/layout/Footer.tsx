@@ -5,7 +5,7 @@ import { INDUSTRIES, SOLUTIONS, LEGAL, CONTACT, ABOUT } from '../../utils/consta
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-y-20 md:gap-y-0">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-y-20 md:gap-y-0">
         <div className="grid grid-cols-1 md:grid-cols-6 gap-y-14 md:gap-y-0 gap-x-6 items-start">
 
           {/* Logo & Description */}
