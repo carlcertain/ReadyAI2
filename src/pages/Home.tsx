@@ -16,6 +16,7 @@ import Banner8Section from '../components/sections/Banner8Section';
 import Banner9Section from '../components/sections/Banner9Section';
 import Banner10Section from '../components/sections/Banner10Section';
 import SlideAnimator from '../utils/SlideAnimator';
+import SocialSection from '../components/sections/SocialSection';
 
 const Home: React.FC = () => {
   // Update the document title
@@ -63,6 +64,7 @@ const Home: React.FC = () => {
       {/* <IndustriesSection /> */}
       <Banner />
       <CtaSection />
+      <SocialSection />
     </div>
   );
 };

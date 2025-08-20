@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import mammoth from 'mammoth';
 import WordDocViewer from '../components/sections/WordDocParser';
+import { Linkedin } from 'lucide-react';
 
 
 
@@ -31,6 +32,9 @@ const InsightsPage: React.FC = () => {
 
   // find current article if in url
   const currArticle = articles.find(article => article.url === articleName);
+
+  // shareable URL
+  const shareLinkedInUrl = `https://readyai.dev/insights/${currArticle?.url}`
   
 
   // Handle links
@@ -40,11 +44,16 @@ const InsightsPage: React.FC = () => {
 
   return (
     <div>
+      {/* OPEN GRAPH META-DATA */}
       {currArticle?.title && (
         <Helmet>
           <title>ReadyAI - {currArticle?.title}</title>
           <meta name="description" content={currArticle?.metaDescription} />
           <meta name="keywords" content={currArticle?.metaKeywords} />
+          <meta property="og:title" content={currArticle?.title}/>
+          <meta property="og:image" content={currArticle?.image}/>
+          <meta property="og:description" content={currArticle?.metaDescription}/>
+          <meta property="og:url" content={currArticle?.url}/>
         </Helmet>
       )}
       {!currArticle?.title && (
@@ -70,28 +79,42 @@ const InsightsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-left">
-          <h2 className="text-4xl text-gray-700 mb-16 text-center">
-            {/* You can add a heading here if needed */}
+          <h2 className="text-4xl text-gray-700 mb-40 mt-6 text-center tracking-widest">
+            {!articleName && (<span>LATEST POSTS</span>)}
           </h2>
 
-          {/* Article List */}
+          {/* Main Article List */}
           {!articleName && (
-            <ul className="space-y-2 text-xl">
+            <ul className="text-xl mb-20">
               {articles.map((article, idx) => (
-                <li key={idx} className="mb-10">
-                  <span>{idx+1}. </span>
-                  <button
-                    className="text-blue-600 underline hover:text-blue-800"
-                    onClick={() => onSelect(`${article.url}`)}
+                  <li
+                    key={idx}
+                    className="flex items-start space-x-4 mb-20"
                   >
-                    {article.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-40 h-20 object-cover rounded flex-shrink-0"
+                    />
+                    <div>
+                      <button
+                        className="text-blue-600 underline hover:text-blue-800 block text-left"
+                        onClick={() => onSelect(article.url)}
+                      >
+                        {article.title}
+                      </button>
+                      <p className="text-gray-600 text-base mt-1">
+                        {article.metaDescription}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
           )}
+
+
 
           
           {currArticle && (
@@ -104,8 +127,22 @@ const InsightsPage: React.FC = () => {
                 <img
                   src={currArticle.image}
                   alt="Shadow AI"
-                  className="object-cover w-full md:w-full h-64 rounded-lg mx-auto mb-8 md:mb-20 flex-shrink-0"
+                  className="object-cover w-full md:w-full h-64 mb-2 rounded-lg mx-auto flex-shrink-0"
                 />
+                
+                <div className="flex justify-end gap-2 mb-20">
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareLinkedInUrl}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-2 text-sm md:text-base leading-none"
+                  >
+                    <span className="text-sm md:text-base leading-none">Share:</span>
+                    <Linkedin color="#0077b5" className="w-4 h-4 md:w-5 md:h-5" />
+                  </a>
+                </div>
+
+
                 
                 {/* Parse and display article */}
                 <WordDocViewer docPath={`/articles/${currArticle.path}.docx`} />
