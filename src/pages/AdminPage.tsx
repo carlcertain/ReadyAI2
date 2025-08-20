@@ -38,11 +38,11 @@ export default function AdminPage() {
 
         } catch (err: unknown) {
         if (err instanceof Error) {
-             alert(err.message);
+            // alert(err.message);
             // Refresh on error. If user already in DB, above will throw
-            // setTimeout(() => {
-            //   window.location.reload();
-            // }, 200);
+            setTimeout(() => {
+              window.location.reload();
+            }, 200);
         } else {
             alert("Google sign-in failed.");
         }
