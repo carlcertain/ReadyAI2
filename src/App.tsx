@@ -19,6 +19,8 @@ import { usePerformance } from './hooks/usePerformance';
 import Version from './pages/Version';
 import InsightsPage from './pages/InsightsPage';
 import AboutPage from './pages/AboutPage';
+import ReferralsPage from './pages/ReferralsPage';
+import AdminPage from './pages/AdminPage';
 
 function App() {
   const { trackCustomMetric } = usePerformance();
@@ -57,6 +59,8 @@ function App() {
             <Route path="/insights" element={<InsightsPage />} />  
             <Route path="/insights/:articleName" element={<InsightsPage />} />
             <Route path="/about-us" element={<AboutPage />} />   
+            <Route path="/referral/:referralId" element={<ReferralsPage />} />   
+            <Route path="/admin" element={<AdminPage />} />   
             <Route path="/version" element={<Version />} />
           </Routes>
         </main>
