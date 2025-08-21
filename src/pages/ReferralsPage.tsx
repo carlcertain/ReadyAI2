@@ -64,7 +64,7 @@ const ReferralsPage = () => {
             <div className="flex flex-col">
                 <h3 className="text-xl mb-6">Welcome to the Referrals Page</h3>
                 <p>Please sign in below using your Google account and the referral code will be recorded automatically</p>
-                <p>Thank you</p>
+                <p className="mt-8">Thank you</p>
                 <button type="button" onClick={AuthForm} className="mt-20 bg-blue-500 hover:bg-blue-700 text-white font-bold w-fit py-2 px-4 rounded-md">
                     Sign in with Google
                 </button>
