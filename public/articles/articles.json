@@ -30,5 +30,13 @@
     "image": "/assets/images/The Compliance Playbook For Enterprise AI.jpg",
     "metaDescription": "The Compliance Playbook for Enterprise AI: Navigate SOC 2, HIPAA, GDPR, and more. Learn how to build a secure, compliant AI strategy.",
     "metaKeywords": "compliance playbook for enterprise AI"
+  },
+  {
+    "title": "Agentic AI in the Enterprise: The Next Governance Crisis for CIOs CTOs and HR Leaders",
+    "path": "Agentic AI in the Enterprise The Next Governance Crisis for CIOs CTOs and HR Leaders", 
+    "url": "agentic-AI-in-the-enterprise",
+    "image": "/assets/images/Agentic AI in the Enterprise.jpg",
+    "metaDescription": "Agentic AI is redefining enterprise governance. What CIOs, CTOs, and HR leaders must do now to prepare for digital employees at machine speed.",
+    "metaKeywords": "agentic AI"
   }
 ]
