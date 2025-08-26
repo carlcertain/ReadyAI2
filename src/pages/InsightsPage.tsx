@@ -9,7 +9,6 @@ import { Linkedin } from 'lucide-react';
 
 
 
-
 const InsightsPage: React.FC = () => {
   // get url parameters
   const { articleName } = useParams<{ articleName: string }>();
@@ -51,9 +50,10 @@ const InsightsPage: React.FC = () => {
           <meta name="description" content={currArticle?.metaDescription} />
           <meta name="keywords" content={currArticle?.metaKeywords} />
           <meta property="og:title" content={currArticle?.title}/>
-          <meta property="og:image" content={currArticle?.image}/>
+          <meta property="og:image" content={"https://readyai.dev" + currArticle?.image}/>
           <meta property="og:description" content={currArticle?.metaDescription}/>
-          <meta property="og:url" content={currArticle?.url}/>
+          <meta property="og:url" content={"https://readyai.dev/insights/" + currArticle?.url}/>
+          <meta property="og:type" content="article" />
         </Helmet>
       )}
       {!currArticle?.title && (

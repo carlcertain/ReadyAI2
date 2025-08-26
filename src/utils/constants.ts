@@ -237,8 +237,8 @@ export const NAVIGATION: NavItem[] = [
     })),
   },
   {
-    name: 'Pricing',
-    path: '/pricing'
+    name: 'Plans & Enterprise Options',
+    path: '/plans-and-enterprise-options'
   },
   {
     name: 'FAQ',

@@ -10,7 +10,7 @@ function CalendlySectionPopUp() {
           url="https://calendly.com/readyai-sales" 
           rootElement={document.getElementById('root')} 
           text="Schedule a Call" 
-          textColor="#ffffff" 
+          textColor="#ffffff"
           color="#0069ff" 
       />
     </div>
