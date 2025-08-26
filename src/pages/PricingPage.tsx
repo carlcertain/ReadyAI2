@@ -60,9 +60,10 @@ const PricingPage: React.FC = () => {
               Perfect for validating ROI, testing workflows, and building executive alignment.
             </p>
             <div className="mt-6">
-              <Link to="/pilot" className="inline-block bg-accent text-white px-6 py-3 rounded-lg shadow hover:bg-accent-dark">
-                Request a Pilot
-              </Link>
+              <CalendlyBtn
+                text="Request a Pilot"
+                className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+              />
             </div>
           </div>
 
@@ -74,9 +75,10 @@ const PricingPage: React.FC = () => {
               ReadyAI.dev helps you align with your governance, compliance, and transformation goals.
             </p>
             <div className="mt-6">
-              <Link to="/executive" className="inline-block bg-accent text-white px-6 py-3 rounded-lg shadow hover:bg-accent-dark">
-                Book an Executive Session
-              </Link>
+              <CalendlyBtn
+                text="Book and Executive Session"
+                className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+              />
             </div>
           </div>
 
@@ -95,9 +97,10 @@ const PricingPage: React.FC = () => {
               <li>Unlimited chat history and 20GB storage</li>
             </ul>
             <div className="mt-6">
-              <Link to="/enterprise" className="inline-block bg-accent text-white px-6 py-3 rounded-lg shadow hover:bg-accent-dark">
-                Speak to an AI Strategy Advisor
-              </Link>
+              <CalendlyBtn
+                text="Speak to an AI Strategy Advisor"
+                className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+              />
             </div>
           </div>
         </div>
@@ -134,18 +137,28 @@ const PricingPage: React.FC = () => {
             <li><strong>Executive Evaluation →</strong> Strategic review for leadership teams</li>
             <li><strong>Enterprise Plan →</strong> Scale with enterprise-grade security & governance</li>
           </ul>
-          <div className="mt-6 space-x-4">
-            
-            <Link to="/executive" className="inline-block bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark">Book an Executive Session</Link>
-            <Link to="/enterprise" className="inline-block bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark">Speak to an AI Strategy Advisor</Link>
+          <div className="mt-6 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+            <CalendlyBtn
+              text="Book a Pilot"
+              className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+            />
+            <CalendlyBtn
+              text="Book an Executive Session"
+              className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+            />    
+            <CalendlyBtn
+              text="Speak to an AI Strategy Advisor"
+              className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+            />
           </div>
+
         </div>
 
         {/* Personal Plans */}
         <div className="text-center mt-1 pt-10 pb-10">
           <h2 className="text-xl font-semibold text-accent-dark">Just Exploring AI on Your Own?</h2>
           <p className="mt-4 text-lg text-accent2">
-            Start small with our <Link to="/personal" className="text-accent underline">Free & Personal Plans →</Link>
+            Start small with our <a href="https://devs.ai/signup?ref=sales%40readyai.dev" className="text-accent underline">Free & Personal Plans →</a>
           </p>
         </div>
       </div>

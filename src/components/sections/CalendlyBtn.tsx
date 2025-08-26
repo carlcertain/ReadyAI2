@@ -1,28 +1,33 @@
 import React from "react";
-import { PopupWidget } from "react-calendly";
+import { PopupButton } from "react-calendly";
 
-interface CalendlySectionPopUpProps {
-  url?: string;       // Calendly link
-  text?: string;      // Button text
-  textColor?: string; // Button text color
-  color?: string;     // Button background color
+interface CalendlyButtonProps {
+  url?: string;
+  text?: string;
+  className?: string;
+  pageSettings?: Record<string, unknown>;
+  utm?: Record<string, string>;
+  prefill?: Record<string, any>;
 }
 
-const CalendlyBtn: React.FC<CalendlySectionPopUpProps> = ({
+const CalendlyBtn: React.FC<CalendlyButtonProps> = ({
+  url = "https://calendly.com/readyai-sales",
   text = "Schedule a Call",
-  textColor = "#ffffff",
-  color = "#0069ff",
+  className = "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700",
+  pageSettings,
+  utm,
+  prefill,
 }) => {
   return (
-    <div>
-      <PopupWidget
-        url="https://calendly.com/readyai-sales"
-        rootElement={document.getElementById("root") as HTMLElement}
-        text={text}
-        textColor={textColor}
-        color={color}
-      />
-    </div>
+    <PopupButton
+      url={url}
+      rootElement={document.getElementById("root") as HTMLElement}
+      text={text}
+      className={className}
+      pageSettings={pageSettings}
+      utm={utm}
+      prefill={prefill}
+    />
   );
 };
 
