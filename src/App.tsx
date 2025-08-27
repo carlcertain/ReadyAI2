@@ -51,8 +51,9 @@ function App() {
             <Route path="/search" element={<SearchResults />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/gdpr" element={<GdprPolicy />} />            
-            <Route path="/plans-and-enterprise-options" element={<PricingPage />} />         
+            <Route path="/gdpr" element={<GdprPolicy />} />   
+            <Route path="/plans-and-enterprise-options" element={<PricingPage />} />             
+            <Route path="/plans-and-enterprise-options/:tierId" element={<PricingPage />} />         
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/faq" element={<FAQPage />} />

@@ -160,6 +160,7 @@ export const ABOUT: About[] = [
 
  export const PricingTiers = [
     {
+      id: 'free',
       name: 'Free',
       price: '$0',
       period: '/mo',
@@ -176,6 +177,7 @@ export const ABOUT: About[] = [
       ]
     },
     {
+      id: 'personal',
       name: 'Personal',
       price: '$15',
       period: '/mo/seat',
@@ -196,6 +198,7 @@ export const ABOUT: About[] = [
       ]
     },
     {
+      id: 'business-and-teams',
       name: 'Business',
       price: '$30',
       period: '/mo/seat',
@@ -209,6 +212,21 @@ export const ABOUT: About[] = [
         'Compliance tools',
         'Advanced analytics',
         '+All features in Personal'
+      ]
+    },
+    {
+      id: 'individual-starter-plans',
+      name: 'Individual & Starter Plans',
+      price: '$0',
+      period: '/mo/seat',
+      keywords: 'starter, pricing, free, cost',
+      note: 'Every AI journey has a starting point. If you’re exploring or experimenting on your own, ReadyAI.dev makes it easy to begin.',
+      features: [
+        'Access to 30+ LLMs',
+        '2GB storage',
+        'Unlimited agents',
+        'Analytics & reporting',
+        'Microsoft integration'
       ]
     }
   ];
@@ -238,7 +256,13 @@ export const NAVIGATION: NavItem[] = [
   },
   {
     name: 'Plans & Enterprise Options',
-    path: '/plans-and-enterprise-options'
+    path: '/plans-and-enterprise-options',
+    submenu: PricingTiers.length > 0 ? [
+      {
+        name: PricingTiers[PricingTiers.length - 1].name,
+        path: `/plans-and-enterprise-options/${PricingTiers[PricingTiers.length - 1].id}`,
+      }
+    ] : [],
   },
   {
     name: 'FAQ',
