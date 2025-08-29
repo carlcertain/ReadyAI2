@@ -172,7 +172,7 @@ const PricingPage: React.FC = () => {
           <div className="text-center mt-1 pt-10 pb-10">
             <h2 className="text-xl font-semibold text-accent-dark">Just Exploring AI on Your Own?</h2>
             <p className="mt-4 text-lg text-accent2">
-              <Link to="/plans-and-enterprise-options/individual-starter-plans">Start small with our Free & Personal Plans →</Link>
+              <Link className="underline hover:no-underline" to="/plans-and-enterprise-options/individual-starter-plans">Start small with our Free & Personal Plans →</Link>
             </p>
           </div>
         </div>
