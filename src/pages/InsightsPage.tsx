@@ -14,7 +14,9 @@ const InsightsPage: React.FC = () => {
   const { articleName } = useParams<{ articleName: string }>();
   const navigate = useNavigate();
 
-  type Article = { path: string; title: string, url: string, image: string, metaDescription: string, metaKeywords: string };
+  type Article = {
+    timestamp: ReactNode; path: string; title: string, url: string, image: string, metaDescription: string, metaKeywords: string 
+};
   const [articles, setArticles] = useState<Article[]>([]);
   
 
@@ -105,6 +107,9 @@ const InsightsPage: React.FC = () => {
                       >
                         {article.title}
                       </button>
+                      <p className="text-gray-600 text-base mt-4 mb-1 italic">
+                        {article.timestamp}
+                      </p>
                       <p className="text-gray-600 text-base mt-1">
                         {article.metaDescription}
                       </p>
@@ -129,13 +134,14 @@ const InsightsPage: React.FC = () => {
                   alt="Shadow AI"
                   className="object-cover w-full md:w-full h-64 mb-2 rounded-lg mx-auto flex-shrink-0"
                 />
-                
-                <div className="flex justify-end gap-2 mb-20">
+
+                <div className="grid grid-cols-2 gap-2 mb-20">
+                  <p className="text-sm md:text-base leading-none">{currArticle.timestamp}</p>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareLinkedInUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex gap-2 text-sm md:text-base leading-none"
+                    className="flex gap-2 text-sm md:text-base leading-none justify-end"
                   >
                     <span className="text-sm md:text-base leading-none">Share:</span>
                     <Linkedin color="#0077b5" className="w-4 h-4 md:w-5 md:h-5" />

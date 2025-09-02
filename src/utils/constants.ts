@@ -220,7 +220,7 @@ export const ABOUT: About[] = [
       price: '$0',
       period: '/mo/seat',
       keywords: 'starter, pricing, free, cost',
-      note: 'Every AI journey has a starting point. If you’re exploring or experimenting on your own, ReadyAI.dev makes it easy to begin.',
+      note: 'Best for exploring AI capabilities and learning the basics',
       features: [
         'Access to 30+ LLMs',
         '2GB storage',

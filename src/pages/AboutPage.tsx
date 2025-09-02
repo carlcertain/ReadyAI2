@@ -82,6 +82,8 @@ const AboutPage: React.FC = () => {
 
             <h4 className="text-2xl font-semibold mt-12 mb-6">Meet the People Behind the Platform</h4>
 
+            <img src="/assets/images/readyai-carol-eastman.jpeg" alt="ReadyAI -Carol Eastman" className="rounded-full shadow-md h-60 w-60 ml-24 mt-6" />
+
             <p className="pt-8 pb-8"><a className="text-blue-600" href="https://www.linkedin.com/in/carol-eastman/">Carol Eastman</a>, our CEO, has spent her career leading multi-million dollar tech companies from startup to successful acquisition.</p>
             <p className="pt-8 pb-8">She brings unmatched depth in IT strategy, business operations, and executive leadership.</p>
             <p className="pt-8 pb-8">Carol is joined by an elite team of AI engineers, cybersecurity specialists, and customer success professionals.</p>
