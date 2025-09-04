@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { auth, db } from "../middleware/firebase";
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, User } from "firebase/auth";
 import { doc, getDoc, collection, getDocs, setDoc } from "firebase/firestore";
+import ArticleUploader from "../components/sections/ArticleUploader";
 
 export default function AdminPage() {
   const [user, setUser] = useState<User | null>(null);
@@ -134,8 +135,18 @@ export default function AdminPage() {
             <p>Access denied. Admins only.</p>
           )}
 
+          {/* ================ ADMIN AREA ================ */}
           {!loading && user && role === "admin" && (
           <>
+            {/* ================ Article Uploader ================ */}
+            
+            <h2 className="text-2xl font-bold">Create New Article</h2>
+            <div className="overflow-x-auto mb-20 mt-20">
+              <ArticleUploader />
+            </div>
+
+            {/* ================ Display Referrals ================ */}
+
             <h2 className="text-2xl font-bold mb-6">Current Referrals</h2>
             {data.length > 0 ? (
               <div className="overflow-x-auto">

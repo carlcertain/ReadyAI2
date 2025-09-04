@@ -1,71 +1,82 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import FloatingButton from '../utils/FloatingButton';
-import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
-import mammoth from 'mammoth';
-import WordDocViewer from '../components/sections/WordDocParser';
-import { Linkedin } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import FloatingButton from "../utils/FloatingButton";
+import { Helmet } from "react-helmet";
+import WordDocViewer from "../components/sections/WordDocParser";
+import { Linkedin } from "lucide-react";
 
+// Firebase imports
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { app } from "../middleware/firebase"; // your initialized firebase app
+import WordDocParser from "../components/sections/WordDocParser";
 
+const db = getFirestore(app);
+
+type Article = {
+  id: string;
+  title: string;
+  url: string;
+  imgURL: string; // Firebase Storage URL
+  docURL: string;   // Firebase Storage URL
+  timestamp: string;
+  description: string;
+  metaKeywords: string;
+};
 
 const InsightsPage: React.FC = () => {
-  // get url parameters
   const { articleName } = useParams<{ articleName: string }>();
   const navigate = useNavigate();
-
-  type Article = {
-    timestamp: ReactNode; path: string; title: string, url: string, image: string, metaDescription: string, metaKeywords: string 
-};
   const [articles, setArticles] = useState<Article[]>([]);
-  
 
-  // ---------- MAIN INSIGHTS PAGE -------- //
-  // FETCH and DISPLAY articles from JSON file
+  // fetch metadata from Firestore
   useEffect(() => {
-    fetch('/articles/articles.json')
-      .then(res => res.json())
-      .then(setArticles)
-      .catch(err => {
-        console.error("Failed to load articles:", err);
-      });
+    const fetchArticles = async () => {
+      try {
+        const snapshot = await getDocs(collection(db, "articles"));
+        const docs: Article[] = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        })) as Article[];
+        setArticles(docs);
+      } catch (err) {
+        console.error("Failed to fetch articles from Firestore:", err);
+      }
+    };
+    fetchArticles();
   }, []);
 
-  // find current article if in url
-  const currArticle = articles.find(article => article.url === articleName);
+  // current article from URL
+  const currArticle = articles.find((a) => a.url === articleName);
 
-  // shareable URL
-  const shareLinkedInUrl = `https://readyai.dev/insights/${currArticle?.url}`
-  
+  // LinkedIn share
+  const shareLinkedInUrl = `https://readyai.dev/insights/${currArticle?.url}`;
 
-  // Handle links
   const onSelect = (path: string) => {
     navigate(path);
   };
 
   return (
     <div>
-      {/* OPEN GRAPH META-DATA */}
-      {currArticle?.title && (
+      {/* Open Graph Meta */}
+      {currArticle?.title ? (
         <Helmet>
-          <title>ReadyAI - {currArticle?.title}</title>
-          <meta name="description" content={currArticle?.metaDescription} />
-          <meta name="keywords" content={currArticle?.metaKeywords} />
-          <meta property="og:title" content={currArticle?.title}/>
-          <meta property="og:image" content={"https://readyai.dev" + currArticle?.image}/>
-          <meta property="og:description" content={currArticle?.metaDescription}/>
-          <meta property="og:url" content={"https://readyai.dev/insights/" + currArticle?.url}/>
+          <title>ReadyAI - {currArticle.title}</title>
+          <meta name="description" content={currArticle.description} />
+          <meta name="keywords" content={currArticle.metaKeywords} />
+          <meta property="og:title" content={currArticle.title} />
+          <meta property="og:image" content={currArticle.imgURL} />
+          <meta property="og:description" content={currArticle.description} />
+          <meta property="og:url" content={shareLinkedInUrl} />
           <meta property="og:type" content="article" />
         </Helmet>
-      )}
-      {!currArticle?.title && (
+      ) : (
         <Helmet>
           <title>ReadyAI - Insights</title>
         </Helmet>
       )}
 
+      {/* Header */}
       <div className="relative bg-gradient-to-br from-primary via-primary-light to-primary-dark overflow-hidden">
-        {/* Abstract background patterns */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center"></div>
         </div>
@@ -74,94 +85,98 @@ const InsightsPage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
                 <span className="block">Insights</span>
-                <span className="block text-2xl mt-4 text-accent">Industry insights and trends</span>
+                <span className="block text-2xl mt-4 text-accent">
+                  Industry insights and trends
+                </span>
               </h1>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Articles list OR single article */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-left">
-          <h2 className="text-4xl text-gray-700 mb-40 mt-6 text-center tracking-widest">
-            {!articleName && (<span>LATEST POSTS</span>)}
-          </h2>
-
-          {/* Main Article List */}
           {!articleName && (
-            <ul className="text-xl mb-20">
-              {articles.map((article, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start space-x-4 mb-20"
-                  >
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-40 h-20 object-cover rounded flex-shrink-0"
-                    />
-                    <div>
-                      <button
-                        className="text-blue-600 underline hover:text-blue-800 block text-left"
-                        onClick={() => onSelect(article.url)}
-                      >
-                        {article.title}
-                      </button>
-                      <p className="text-gray-600 text-base mt-4 mb-1 italic">
-                        {article.timestamp}
-                      </p>
-                      <p className="text-gray-600 text-base mt-1">
-                        {article.metaDescription}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            <h2 className="text-4xl text-gray-700 mb-40 mt-6 text-center tracking-widest">
+              LATEST POSTS
+            </h2>
           )}
 
+          {/* List view */}
+          {!articleName && (
+            <ul className="text-xl mb-20">
+              {articles.map((article) => (
+                <li
+                  key={article.id}
+                  className="flex items-start space-x-4 mb-20"
+                >
+                  <img
+                    src={article.imgURL}
+                    alt={article.title}
+                    className="w-40 h-20 object-cover rounded flex-shrink-0"
+                  />
+                  <div>
+                    <button
+                      className="text-blue-600 underline hover:text-blue-800 block text-left"
+                      onClick={() => onSelect(article.url)}
+                    >
+                      {article.title}
+                    </button>
+                    <p className="text-gray-600 text-base mt-4 mb-1 italic">
+                      {article.timestamp}
+                    </p>
+                    <p className="text-gray-600 text-base mt-1">
+                      {article.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
 
-
-          
+          {/* Single article view */}
           {currArticle && (
             <>
-            <WordDocViewer docPath={`/articles/${currArticle.url}.docx`} />
-            <h2 className="text-4xl text-gray-700 mb-16 text-center">
+              <WordDocViewer docPath={currArticle.doc} />
+              <h2 className="text-4xl text-gray-700 mb-16 text-center">
                 {currArticle.title}
               </h2>
+
               <div className="flex flex-col min-h-screen text-xl leading-loose tracking-widest">
                 <img
-                  src={currArticle.image}
-                  alt="Shadow AI"
-                  className="object-cover w-full md:w-full h-64 mb-2 rounded-lg mx-auto flex-shrink-0"
+                  src={currArticle.imgURL}
+                  alt={currArticle.title}
+                  className="object-cover w-full h-64 mb-2 rounded-lg mx-auto flex-shrink-0"
                 />
 
                 <div className="grid grid-cols-2 gap-2 mb-20">
-                  <p className="text-sm md:text-base leading-none">{currArticle.timestamp}</p>
+                  <p className="text-sm md:text-base leading-none">
+                    {currArticle.timestamp}
+                  </p>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareLinkedInUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex gap-2 text-sm md:text-base leading-none justify-end"
                   >
-                    <span className="text-sm md:text-base leading-none">Share:</span>
+                    <span>Share:</span>
                     <Linkedin color="#0077b5" className="w-4 h-4 md:w-5 md:h-5" />
                   </a>
                 </div>
 
-
-                
-                {/* Parse and display article */}
-                <WordDocViewer docPath={`/articles/${currArticle.path}.docx`} />
-                
+                {/* Parse and display Word doc from Firebase Storage */}
+                <WordDocParser docPath={currArticle.docURL} />
               </div>
             </>
           )}
-
-          
         </div>
       </div>
 
-      <FloatingButton url="https://devs.ai/signup?ref=sales%40readyai.dev" label="Explore Platform" />
+      <FloatingButton
+        url="https://devs.ai/signup?ref=sales%40readyai.dev"
+        label="Explore Platform"
+      />
     </div>
   );
 };
