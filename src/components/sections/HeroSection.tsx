@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
+import CalendlyBtn from './CalendlyBtn';
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,10 +15,16 @@ const HeroSection: React.FC = () => {
         <div className="pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">All of your AI solutions on one</span>
-              <span className="block text-accent">enterprise grade platform for one monthly fee</span>
-              <span className="block text-2xl mt-4 text-gray-100">Migrate to the new era of AI management</span>
+              <span className="block">All your AI</span>
+              <span className="block text-accent">One secure, enterprise-grade platform</span>
             </h1>
+            <span className="block text-2xl mt-4 text-gray-100">Step confidently into the AI era</span>
+            <span className="font-bold block text-2xl mt-4 text-gray-100">One monthly fee. No surprises</span>
+            <div className="mt-12"> 
+              <CalendlyBtn
+              text="Book a Discovery Call"
+              className="bg-accent text-white px-5 py-2 rounded-lg shadow hover:bg-accent-dark"
+            /></div>
           </div>
         </div>
       </div>
