@@ -110,9 +110,6 @@ const UploadDocAndImage: React.FC = () => {
       <label className="font-bold block">Meta Keywords:</label>
       <input type="text" value={metaKeywords} onChange={(e) => setMetaKeywords(e.target.value)} className="border p-2 w-full" />
 
-      <label className="font-bold block">Timestamp:</label>
-      <input type="text" value={timestamp} onChange={(e) => setTimestamp(e.target.value)} className="border p-2 w-full" />
-
       <button
         onClick={handleUpload}
         disabled={uploading}

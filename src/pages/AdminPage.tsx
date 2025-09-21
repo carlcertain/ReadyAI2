@@ -25,7 +25,7 @@ export default function AdminPage() {
             email: userCred.user.email,
             createdAt: new Date().toISOString(),
             provider: "google",
-            role: "user"
+            role: "test"
             },
             { merge: true } // won't overwrite existing data
         );

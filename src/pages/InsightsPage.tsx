@@ -6,7 +6,7 @@ import WordDocViewer from "../components/sections/WordDocParser";
 import { Linkedin } from "lucide-react";
 
 // Firebase imports
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, orderBy, Timestamp } from "firebase/firestore";
 import { app } from "../middleware/firebase"; // your initialized firebase app
 import WordDocParser from "../components/sections/WordDocParser";
 
@@ -18,7 +18,7 @@ type Article = {
   url: string;
   imgURL: string; // Firebase Storage URL
   docURL: string;   // Firebase Storage URL
-  timestamp: string;
+  timestamp: Timestamp;
   description: string;
   metaKeywords: string;
 };
@@ -32,7 +32,8 @@ const InsightsPage: React.FC = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const snapshot = await getDocs(collection(db, "articles"));
+        const q = query(collection(db, "articles"), orderBy("timestamp", "desc")); 
+        const snapshot = await getDocs(q);
         const docs: Article[] = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -54,6 +55,22 @@ const InsightsPage: React.FC = () => {
   const onSelect = (path: string) => {
     navigate(path);
   };
+
+  function formatTimestamp(ts: Timestamp | string): string {
+    if (!ts) return "";
+
+    if (ts instanceof Timestamp) {
+      return ts.toDate().toLocaleDateString("en-US", {
+        weekday: "short", // Tue
+        month: "short",   // Sep
+        day: "numeric",   // 2
+        year: "numeric",  // 2025
+      });
+    }
+
+    // If it's already a string, just return it
+    return ts;
+  }
 
   return (
     <div>
@@ -98,7 +115,7 @@ const InsightsPage: React.FC = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-left">
           {!articleName && (
-            <h2 className="text-4xl text-gray-700 mb-40 mt-6 text-center tracking-widest">
+            <h2 className="text-4xl text-gray-700 mb-40 mt-20 text-center tracking-widest">
               LATEST POSTS
             </h2>
           )}
@@ -124,7 +141,7 @@ const InsightsPage: React.FC = () => {
                       {article.title}
                     </button>
                     <p className="text-gray-600 text-base mt-4 mb-1 italic">
-                      {article.timestamp}
+                      {formatTimestamp(article.timestamp)}
                     </p>
                     <p className="text-gray-600 text-base mt-1">
                       {article.description}
@@ -152,7 +169,7 @@ const InsightsPage: React.FC = () => {
 
                 <div className="grid grid-cols-2 gap-2 mb-20">
                   <p className="text-sm md:text-base leading-none">
-                    {currArticle.timestamp}
+                    {formatTimestamp(currArticle.timestamp)}
                   </p>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareLinkedInUrl}`}
