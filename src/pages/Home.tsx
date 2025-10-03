@@ -32,7 +32,6 @@ const Home: React.FC = () => {
       <Banner6Section />  
       <CalcSection />
       <Banner4Section />
-      <Banner5Section /> 
       <Banner8Section /> 
       <Banner2Section />
       <Banner7Section />
